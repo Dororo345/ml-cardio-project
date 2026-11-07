@@ -344,6 +344,7 @@ button:disabled {
                 
         <h3>Факторы, влияющие на прогноз</h3>
 
+        <p id="xaiMessage" role="status" hidden></p>
         <ol id="xaiList"></ol>
 
         <p class="description">
@@ -440,6 +441,9 @@ form.addEventListener("submit", async function(event) {
         const xaiList = document.getElementById("xaiList");
 
         xaiList.replaceChildren();
+        const xaiMessage = document.getElementById("xaiMessage");
+        xaiMessage.textContent = result.xai_message || "";
+        xaiMessage.hidden = result.xai_status !== "unavailable";
 
         for (const factor of result.factors || []) {
             const item = document.createElement("li");
