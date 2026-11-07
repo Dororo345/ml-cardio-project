@@ -4,8 +4,13 @@
 - [PR #13](https://github.com/Dororo345/ml-cardio-project/pull/13) объединён 07.11.2026. Это не подтверждает два спринта.
 - Старые [Issues #1–#12](https://github.com/Dororo345/ml-cardio-project/issues) открыты в момент проверки; реальных закрытий для двух спринтов нет.
 - У старых Issues есть события привязки к GitHub Projects V2. Текущие поля самой доски через доступное подключение не проверены.
-- История GitHub Actions при проверке: 0 workflow runs; в `main` пока нет `.github/workflows`. Настройка CI включена в отдельный PR.
+- История GitHub Actions при проверке: 0 workflow runs; в `main` пока нет `.github/workflows`. Настройка CI опубликована в main после успешного объединения PR #22.
 - Issues #14–#21 созданы для **планируемой** работы в двух спринтах; до подтверждения DoD все остаются открытыми.
 - Доступные действия GitHub-коннектора не предоставляют изменения GitHub Projects V2 (полей/статусов/колонок). Для завершения интерфейсной части требуется настройка через сайт GitHub.
 
 Доказательство для сдачи: screenshots GitHub Projects, экспорт событий с `GITHUB_API`, реальные ссылки на CI/PR, протокол реальной ретроспективы, метрики за обе недели. Не использовать `simulated_transitions.csv` из предыдущего учебного отчёта как факт.
+## Проверка после подготовки
+
+- [PR #22](https://github.com/Dororo345/ml-cardio-project/pull/22) успешно объединён 07.11.2026, merge commit `e26e5a9183d1a4496a79c03eb369589aae34cd49`.
+- [GitHub Actions CI](https://github.com/Dororo345/ml-cardio-project/actions/runs/42373453237) для head commit `acadb7c4ae9a7a405df8fe4d733f9fe1e8fe8896` завершился со статусом **success**.
+- Это подтверждает CI-код, но не наличие двух завершённых спринтов, обзора, ретроспективы или настоящей Kanban-доски.
