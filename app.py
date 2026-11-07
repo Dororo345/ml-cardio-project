@@ -1,6 +1,7 @@
 """Educational heart-disease-classification demo: not a clinical risk calculator."""
 from pathlib import Path
 import json
+import math
 from uuid import uuid4
 
 import joblib
@@ -73,10 +74,12 @@ def predict():
     input_df = pd.DataFrame([values], columns=FEATURES)
     try:
         probability = float(model.predict_proba(input_df)[0, 1])
+        if not math.isfinite(probability) or not 0 <= probability <= 1:
+            raise ValueError("Invalid model probability")
         factors = xai_explainer.explain(input_df)
     except Exception:
         # Never log the submitted medical input or reveal traceback to the client.
-        app.logger.exception("Prediction failed: request_id=%s", g.get("request_id", ""))
+        app.logger.error("Prediction failed: request_id=%s", g.get("request_id", ""))
         return error_response("PREDICTION_ERROR", "Ошибка расчёта", 500)
 
     return jsonify({
