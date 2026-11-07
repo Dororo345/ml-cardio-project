@@ -30,6 +30,8 @@ jobs:
         run: npm ci
       - name: Test form DOM behavior
         run: npm test
+      - name: Run synthetic HTTP acceptance
+        run: python scripts/lz9/synthetic_acceptance.py
       - name: Preserve test results
         if: always()
         uses: actions/upload-artifact@v4
