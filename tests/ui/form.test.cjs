@@ -22,3 +22,12 @@ test('400 explains fields, hides previous result, preserves valid input',async()
  assert.equal(d.getElementById('submitBtn').disabled,false);
  dom.window.close();
 });
+
+test('XAI unavailable displays explicit message and no invented factors',async()=>{
+ const {dom,d,form}=setup(async()=>({ok:true,json:async()=>({probability_percent:20.93,predicted_class:0,factors:[],xai_status:'unavailable',xai_message:'Объяснение временно недоступно'})}));
+ form.dispatchEvent(new dom.window.Event('submit',{cancelable:true})); await tick();
+ assert.equal(d.getElementById('resultBlock').hidden,false);
+ assert.equal(d.getElementById('xaiMessage').hidden,false);
+ assert.equal(d.getElementById('xaiList').children.length,0);
+ dom.window.close();
+});

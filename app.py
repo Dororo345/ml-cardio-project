@@ -20,7 +20,11 @@ model = joblib.load(BASE_DIR / "models" / "heart_model.joblib")
 with (BASE_DIR / "models" / "model_info.json").open(encoding="utf-8") as file:
     model_info = json.load(file)
 FEATURES = model_info["input_features"]
-xai_explainer = HeartExplainer(model, model_info, BASE_DIR)
+try:
+    xai_explainer = HeartExplainer(model, model_info, BASE_DIR)
+except Exception:
+    app.logger.error("XAI initialization unavailable")
+    xai_explainer = None
 
 
 @app.before_request
@@ -76,13 +80,26 @@ def predict():
         probability = float(model.predict_proba(input_df)[0, 1])
         if not math.isfinite(probability) or not 0 <= probability <= 1:
             raise ValueError("Invalid model probability")
-        factors = xai_explainer.explain(input_df)
     except Exception:
         # Never log the submitted medical input or reveal traceback to the client.
         app.logger.error("Prediction failed: request_id=%s", g.get("request_id", ""))
         return error_response("PREDICTION_ERROR", "Ошибка расчёта", 500)
 
+    try:
+        if xai_explainer is None:
+            raise RuntimeError("XAI unavailable")
+        factors = xai_explainer.explain(input_df)
+        xai_status = "available"
+        xai_message = None
+    except Exception:
+        app.logger.warning("XAI unavailable: request_id=%s", g.get("request_id", ""))
+        factors = []
+        xai_status = "unavailable"
+        xai_message = "Объяснение временно недоступно; прогноз рассчитан моделью."
+
     return jsonify({
+        "xai_status": xai_status,
+        "xai_message": xai_message,
         "probability": round(probability, 4),
         "probability_percent": round(probability * 100, 2),
         "predicted_class": int(probability >= 0.5),
