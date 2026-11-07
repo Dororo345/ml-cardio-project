@@ -380,12 +380,23 @@ const features = [
     "oldpeak", "slope", "ca", "thal"
 ];
 
-form.addEventListener("submit", async function(event) {
-    event.preventDefault();
-
+let requestGeneration = 0;
+function clearOutput() {
     resultBlock.hidden = true;
     errorMessage.hidden = true;
+    errorMessage.textContent = "";
+    probabilityValue.textContent = "";
+    classification.textContent = "";
+    progressFill.style.width = "0%";
+    document.getElementById("xaiList").replaceChildren();
+    document.getElementById("xaiMessage").textContent = "";
+    document.getElementById("xaiMessage").hidden = true;
     for (const feature of features) form.elements[feature].removeAttribute("aria-invalid");
+}
+form.addEventListener("submit", async function(event) {
+    event.preventDefault();
+    const generation = ++requestGeneration;
+    clearOutput();
 
     if (!form.reportValidity()) {
         return;
@@ -410,6 +421,7 @@ form.addEventListener("submit", async function(event) {
         });
 
         const result = await response.json();
+        if (generation !== requestGeneration) return;
 
         if (!response.ok) {
             const invalidFields = (result.fields || []).filter(name => features.includes(name));
@@ -458,18 +470,22 @@ form.addEventListener("submit", async function(event) {
         resultBlock.hidden = false;
 
     } catch (error) {
+        if (generation !== requestGeneration) return;
         errorMessage.textContent = error.message;
         errorMessage.hidden = false;
     } finally {
-        submitBtn.disabled = false;
-        submitBtn.textContent = "Рассчитать прогноз";
+        if (generation === requestGeneration) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = "Рассчитать прогноз";
+        }
     }
 });
 
 form.addEventListener("reset", function() {
-    resultBlock.hidden = true;
-    errorMessage.hidden = true;
-    progressFill.style.width = "0%";
+    ++requestGeneration;
+    clearOutput();
+    submitBtn.disabled = false;
+    submitBtn.textContent = "Рассчитать прогноз";
 });
 
 document.getElementById("exampleBtn").addEventListener("click", function() {
@@ -493,8 +509,10 @@ document.getElementById("exampleBtn").addEventListener("click", function() {
         form.elements[name].value = String(value);
     }
 
-    resultBlock.hidden = true;
-    errorMessage.hidden = true;
+    ++requestGeneration;
+    clearOutput();
+    submitBtn.disabled = false;
+    submitBtn.textContent = "Рассчитать прогноз";
 });
 </script>
 
