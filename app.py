@@ -2,6 +2,7 @@
 from pathlib import Path
 import json
 import math
+import hashlib
 from uuid import uuid4
 
 import joblib
@@ -19,6 +20,9 @@ app.config["MAX_CONTENT_LENGTH"] = 16 * 1024  # small JSON with 13 measurements
 model = joblib.load(BASE_DIR / "models" / "heart_model.joblib")
 with (BASE_DIR / "models" / "model_info.json").open(encoding="utf-8") as file:
     model_info = json.load(file)
+MODEL_VERSION = model_info["model_version"]
+if hashlib.sha256((BASE_DIR / "models" / "heart_model.joblib").read_bytes()).hexdigest() != model_info["artifact_sha256"]:
+    raise RuntimeError("Model artifact does not match metadata")
 FEATURES = model_info["input_features"]
 try:
     xai_explainer = HeartExplainer(model, model_info, BASE_DIR)
@@ -64,7 +68,7 @@ def home():
 
 @app.get("/health")
 def health():
-    return jsonify({"status": "ok"})
+    return jsonify({"status": "ok", "model_version": MODEL_VERSION})
 
 
 @app.post("/predict")
@@ -98,6 +102,7 @@ def predict():
         xai_message = "Объяснение временно недоступно; прогноз рассчитан моделью."
 
     return jsonify({
+        "model_version": MODEL_VERSION,
         "xai_status": xai_status,
         "xai_message": xai_message,
         "probability": round(probability, 4),

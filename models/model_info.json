@@ -38,5 +38,7 @@
     "1": "есть в разметке"
   },
   "important_warning": "Исследовательский прототип, не медицинский диагноз и не будущий риск",
-  "sklearn_version": "1.6.1"
+  "sklearn_version": "1.6.1",
+  "artifact_sha256": "0d9b1473f8af7bc971e3c8c204f2765ab235351b911eb8d4a410e499f80c16db",
+  "model_version": "cleveland-logreg-1-0d9b1473f8af"
 }
