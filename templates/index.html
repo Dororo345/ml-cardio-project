@@ -384,6 +384,7 @@ form.addEventListener("submit", async function(event) {
 
     resultBlock.hidden = true;
     errorMessage.hidden = true;
+    for (const feature of features) form.elements[feature].removeAttribute("aria-invalid");
 
     if (!form.reportValidity()) {
         return;
@@ -410,7 +411,13 @@ form.addEventListener("submit", async function(event) {
         const result = await response.json();
 
         if (!response.ok) {
-            throw new Error(result.error || "Ошибка расчёта");
+            const invalidFields = (result.fields || []).filter(name => features.includes(name));
+            const labels = invalidFields.map(name => {
+                form.elements[name].setAttribute("aria-invalid", "true");
+                return document.querySelector(`label[for="${name}"]`).textContent.trim();
+            });
+            const details = labels.length ? ` Исправьте поля: ${labels.join(", ")}.` : "";
+            throw new Error((result.error || "Ошибка расчёта") + details);
         }
 
         const percent = Number(result.probability_percent);
