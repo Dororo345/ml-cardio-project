@@ -1,0 +1,25 @@
+{
+  "start": "2026-11-07T13:17:47+00:00",
+  "end": "2026-11-07T13:27:34+00:00",
+  "duration_minutes": 9.783333333333333,
+  "throughput": 4,
+  "throughput_per_minute": 0.4088586030664395,
+  "mean_cycle_minutes": 3.595833333333333,
+  "p85_nearest_rank": 4.583333333333333,
+  "p85_linear": 4.193333333333333,
+  "mean_time_weighted_wip": 1.4701873935264052,
+  "max_wip": 2,
+  "minutes_wip_over_one": 4.816666666666667,
+  "little_rhs": 1.4701873935264054,
+  "little_residual": -2.220446049250313e-16,
+  "status_total_minutes": {
+    "Backlog": 13.25,
+    "Ready": 0.4666666666666667,
+    "In Progress": 8.866666666666667,
+    "Waiting Review": 1.8166666666666669,
+    "Review": 1.3166666666666667,
+    "Testing": 2.3833333333333333
+  },
+  "mean_daily_terminal_wip": 0,
+  "mean_daily_integrated_wip_within_session": 1.4701873935264052
+}

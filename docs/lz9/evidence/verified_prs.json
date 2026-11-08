@@ -1,0 +1,170 @@
+[
+  {
+    "pr": 23,
+    "url": "https://github.com/Dororo345/ml-cardio-project/pull/23",
+    "head": "a5e798b4528492b7cc91b6ae6352ebd300dc8b63",
+    "merge": "ba250954c4ddd3c41c6daf10aa9b16be94cb9da4",
+    "merged_at": "2026-11-07T13:21:31Z",
+    "checks": [
+      {
+        "name": "tests",
+        "conclusion": "success",
+        "url": "https://github.com/Dororo345/ml-cardio-project/actions/runs/42376484377/job/128415006176",
+        "completed_at": "2026-11-07T13:20:43Z"
+      },
+      {
+        "name": "tests",
+        "conclusion": "success",
+        "url": "https://github.com/Dororo345/ml-cardio-project/actions/runs/42376461775/job/128414943132",
+        "completed_at": "2026-11-07T13:20:23Z"
+      }
+    ]
+  },
+  {
+    "pr": 24,
+    "url": "https://github.com/Dororo345/ml-cardio-project/pull/24",
+    "head": "2e93b8336a362aeb5b16872e33e198a18a6ad42a",
+    "merge": "cf19134e54745862523a9def6a00d94a77dd8725",
+    "merged_at": "2026-11-07T13:23:45Z",
+    "checks": [
+      {
+        "name": "tests",
+        "conclusion": "success",
+        "url": "https://github.com/Dororo345/ml-cardio-project/actions/runs/42376662380/job/128415528497",
+        "completed_at": "2026-11-07T13:22:56Z"
+      },
+      {
+        "name": "tests",
+        "conclusion": "success",
+        "url": "https://github.com/Dororo345/ml-cardio-project/actions/runs/42376653538/job/128415502445",
+        "completed_at": "2026-11-07T13:22:45Z"
+      }
+    ]
+  },
+  {
+    "pr": 25,
+    "url": "https://github.com/Dororo345/ml-cardio-project/pull/25",
+    "head": "2a7c84a7a198ee32ad6539acb33a29f3990ed6cc",
+    "merge": "04af24069ebadcad3cf719dbf921b1e2faf2d707",
+    "merged_at": "2026-11-07T13:25:51Z",
+    "checks": [
+      {
+        "name": "tests",
+        "conclusion": "success",
+        "url": "https://github.com/Dororo345/ml-cardio-project/actions/runs/42376818260/job/128415999305",
+        "completed_at": "2026-11-07T13:25:00Z"
+      },
+      {
+        "name": "tests",
+        "conclusion": "success",
+        "url": "https://github.com/Dororo345/ml-cardio-project/actions/runs/42376810735/job/128415976214",
+        "completed_at": "2026-11-07T13:25:02Z"
+      }
+    ]
+  },
+  {
+    "pr": 26,
+    "url": "https://github.com/Dororo345/ml-cardio-project/pull/26",
+    "head": "059ce9ec1044e843a366f5997abe48bda7a2c431",
+    "merge": "dd4225a6399bebf0846f3f07e1fda084d2135d48",
+    "merged_at": "2026-11-07T13:27:22Z",
+    "checks": [
+      {
+        "name": "tests",
+        "conclusion": "success",
+        "url": "https://github.com/Dororo345/ml-cardio-project/actions/runs/42376973733/job/128416458933",
+        "completed_at": "2026-11-07T13:27:10Z"
+      },
+      {
+        "name": "tests",
+        "conclusion": "success",
+        "url": "https://github.com/Dororo345/ml-cardio-project/actions/runs/42376966719/job/128416435610",
+        "completed_at": "2026-11-07T13:27:08Z"
+      }
+    ]
+  },
+  {
+    "pr": 27,
+    "url": "https://github.com/Dororo345/ml-cardio-project/pull/27",
+    "head": "b86fde37632aac76cfb78427c43ae5160b8cc6f0",
+    "merge": "4a0b2b8e5442c50eaeac72b76fd400f1adb92067",
+    "merged_at": "2026-11-07T13:31:27Z",
+    "checks": [
+      {
+        "name": "tests",
+        "conclusion": "success",
+        "url": "https://github.com/Dororo345/ml-cardio-project/actions/runs/42377227937/job/128417225018",
+        "completed_at": "2026-11-07T13:30:37Z"
+      },
+      {
+        "name": "tests",
+        "conclusion": "success",
+        "url": "https://github.com/Dororo345/ml-cardio-project/actions/runs/42377218702/job/128417199342",
+        "completed_at": "2026-11-07T13:30:26Z"
+      }
+    ]
+  },
+  {
+    "pr": 28,
+    "url": "https://github.com/Dororo345/ml-cardio-project/pull/28",
+    "head": "95e494ada7e4bdc905d174828b8c82bd2919b20c",
+    "merge": "03aef49a9283d28c22bb8ada56514ff26f217e72",
+    "merged_at": "2026-11-07T13:34:23Z",
+    "checks": [
+      {
+        "name": "tests",
+        "conclusion": "success",
+        "url": "https://github.com/Dororo345/ml-cardio-project/actions/runs/42377469761/job/128417911820",
+        "completed_at": "2026-11-07T13:33:45Z"
+      },
+      {
+        "name": "tests",
+        "conclusion": "success",
+        "url": "https://github.com/Dororo345/ml-cardio-project/actions/runs/42377460948/job/128417886014",
+        "completed_at": "2026-11-07T13:33:33Z"
+      }
+    ]
+  },
+  {
+    "pr": 29,
+    "url": "https://github.com/Dororo345/ml-cardio-project/pull/29",
+    "head": "9538cdedc07614a450b24038c979f29dd29f1c6c",
+    "merge": "bc5c5051dd179128fc9bd6925bc4f292268f8a3c",
+    "merged_at": "2026-11-07T13:36:59Z",
+    "checks": [
+      {
+        "name": "tests",
+        "conclusion": "success",
+        "url": "https://github.com/Dororo345/ml-cardio-project/actions/runs/42377688078/job/128418543690",
+        "completed_at": "2026-11-07T13:36:23Z"
+      },
+      {
+        "name": "tests",
+        "conclusion": "success",
+        "url": "https://github.com/Dororo345/ml-cardio-project/actions/runs/42377678840/job/128418516292",
+        "completed_at": "2026-11-07T13:36:16Z"
+      }
+    ]
+  },
+  {
+    "pr": 30,
+    "url": "https://github.com/Dororo345/ml-cardio-project/pull/30",
+    "head": "c76a40612245c5bd14e3c5a838294055238e9e76",
+    "merge": "1317c865850b841035f534617842b2f983242f05",
+    "merged_at": "2026-11-07T13:39:57Z",
+    "checks": [
+      {
+        "name": "tests",
+        "conclusion": "success",
+        "url": "https://github.com/Dororo345/ml-cardio-project/actions/runs/42377916220/job/128419234725",
+        "completed_at": "2026-11-07T13:39:27Z"
+      },
+      {
+        "name": "tests",
+        "conclusion": "success",
+        "url": "https://github.com/Dororo345/ml-cardio-project/actions/runs/42377908514/job/128419210951",
+        "completed_at": "2026-11-07T13:39:42Z"
+      }
+    ]
+  }
+]
