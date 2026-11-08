@@ -1,0 +1,222 @@
+[
+  {
+    "n": 14,
+    "comments": [
+      {
+        "id": 6707444731,
+        "html_url": "https://github.com/Dororo345/ml-cardio-project/issues/14#issuecomment-6707444731",
+        "body": "FLOW: Ready",
+        "created_at": "2026-11-07T13:17:47Z",
+        "updated_at": "2026-11-07T13:17:47Z"
+      },
+      {
+        "id": 6707446894,
+        "html_url": "https://github.com/Dororo345/ml-cardio-project/issues/14#issuecomment-6707446894",
+        "body": "FLOW: In Progress",
+        "created_at": "2026-11-07T13:18:00Z",
+        "updated_at": "2026-11-07T13:18:00Z"
+      },
+      {
+        "id": 6707468893,
+        "html_url": "https://github.com/Dororo345/ml-cardio-project/issues/14#issuecomment-6707468893",
+        "body": "FLOW: Waiting Review",
+        "created_at": "2026-11-07T13:20:15Z",
+        "updated_at": "2026-11-07T13:20:15Z"
+      },
+      {
+        "id": 6707474042,
+        "html_url": "https://github.com/Dororo345/ml-cardio-project/issues/14#issuecomment-6707474042",
+        "body": "FLOW: Review",
+        "created_at": "2026-11-07T13:20:45Z",
+        "updated_at": "2026-11-07T13:20:45Z"
+      },
+      {
+        "id": 6707478347,
+        "html_url": "https://github.com/Dororo345/ml-cardio-project/issues/14#issuecomment-6707478347",
+        "body": "FLOW: Testing",
+        "created_at": "2026-11-07T13:21:11Z",
+        "updated_at": "2026-11-07T13:21:11Z"
+      },
+      {
+        "id": 6707482754,
+        "html_url": "https://github.com/Dororo345/ml-cardio-project/issues/14#issuecomment-6707482754",
+        "body": "Реализовано в PR #23. Локально 109 тестов прошли; CI Python 3.11: https://github.com/Dororo345/ml-cardio-project/actions/runs/42376484377 . Контракт и ограничения: docs/lz9/API_CONTRACT.md. Самопроверка выполнена по действующему PROCESS.md; независимое человеческое ревью остаётся отдельным ограничением методички.",
+        "created_at": "2026-11-07T13:21:37Z",
+        "updated_at": "2026-11-07T13:21:37Z"
+      }
+    ],
+    "issue": {
+      "url": "https://github.com/Dororo345/ml-cardio-project/issues/14",
+      "title": "[ЛЗ9/S1] Контракт ошибок `/predict` соответствует документации",
+      "state": "closed",
+      "created_at": "2026-11-07T12:33:12Z",
+      "updated_at": "2026-11-07T13:21:43Z",
+      "closed_at": "2026-11-07T13:21:43Z"
+    }
+  },
+  {
+    "n": 15,
+    "comments": [
+      {
+        "id": 6707459190,
+        "html_url": "https://github.com/Dororo345/ml-cardio-project/issues/15#issuecomment-6707459190",
+        "body": "FLOW: Ready",
+        "created_at": "2026-11-07T13:19:15Z",
+        "updated_at": "2026-11-07T13:19:15Z"
+      },
+      {
+        "id": 6707459991,
+        "html_url": "https://github.com/Dororo345/ml-cardio-project/issues/15#issuecomment-6707459991",
+        "body": "FLOW: In Progress",
+        "created_at": "2026-11-07T13:19:20Z",
+        "updated_at": "2026-11-07T13:19:20Z"
+      },
+      {
+        "id": 6707491098,
+        "html_url": "https://github.com/Dororo345/ml-cardio-project/issues/15#issuecomment-6707491098",
+        "body": "FLOW: Waiting Review",
+        "created_at": "2026-11-07T13:22:27Z",
+        "updated_at": "2026-11-07T13:22:27Z"
+      },
+      {
+        "id": 6707496417,
+        "html_url": "https://github.com/Dororo345/ml-cardio-project/issues/15#issuecomment-6707496417",
+        "body": "FLOW: Review",
+        "created_at": "2026-11-07T13:22:58Z",
+        "updated_at": "2026-11-07T13:22:58Z"
+      },
+      {
+        "id": 6707500054,
+        "html_url": "https://github.com/Dororo345/ml-cardio-project/issues/15#issuecomment-6707500054",
+        "body": "FLOW: Testing",
+        "created_at": "2026-11-07T13:23:20Z",
+        "updated_at": "2026-11-07T13:23:20Z"
+      },
+      {
+        "id": 6707505267,
+        "html_url": "https://github.com/Dororo345/ml-cardio-project/issues/15#issuecomment-6707505267",
+        "body": "PR #24 объединён. Приёмочный DOM-тест: 1 passed. Python CI: https://github.com/Dororo345/ml-cardio-project/actions/runs/42376662380 . Самопроверка и границы jsdom зафиксированы в PR и docs/lz9/UI_TESTS.md.",
+        "created_at": "2026-11-07T13:23:50Z",
+        "updated_at": "2026-11-07T13:23:50Z"
+      }
+    ],
+    "issue": {
+      "url": "https://github.com/Dororo345/ml-cardio-project/issues/15",
+      "title": "[ЛЗ9/S1] Понятные сообщения об ошибках отдельных полей формы",
+      "state": "closed",
+      "created_at": "2026-11-07T12:33:14Z",
+      "updated_at": "2026-11-07T13:23:55Z",
+      "closed_at": "2026-11-07T13:23:55Z"
+    }
+  },
+  {
+    "n": 16,
+    "comments": [
+      {
+        "id": 6707491953,
+        "html_url": "https://github.com/Dororo345/ml-cardio-project/issues/16#issuecomment-6707491953",
+        "body": "FLOW: Ready",
+        "created_at": "2026-11-07T13:22:32Z",
+        "updated_at": "2026-11-07T13:22:32Z"
+      },
+      {
+        "id": 6707492773,
+        "html_url": "https://github.com/Dororo345/ml-cardio-project/issues/16#issuecomment-6707492773",
+        "body": "FLOW: In Progress",
+        "created_at": "2026-11-07T13:22:37Z",
+        "updated_at": "2026-11-07T13:22:37Z"
+      },
+      {
+        "id": 6707511766,
+        "html_url": "https://github.com/Dororo345/ml-cardio-project/issues/16#issuecomment-6707511766",
+        "body": "FLOW: Waiting Review",
+        "created_at": "2026-11-07T13:24:29Z",
+        "updated_at": "2026-11-07T13:24:29Z"
+      },
+      {
+        "id": 6707516885,
+        "html_url": "https://github.com/Dororo345/ml-cardio-project/issues/16#issuecomment-6707516885",
+        "body": "FLOW: Review",
+        "created_at": "2026-11-07T13:25:00Z",
+        "updated_at": "2026-11-07T13:25:00Z"
+      },
+      {
+        "id": 6707520207,
+        "html_url": "https://github.com/Dororo345/ml-cardio-project/issues/16#issuecomment-6707520207",
+        "body": "FLOW: Testing",
+        "created_at": "2026-11-07T13:25:20Z",
+        "updated_at": "2026-11-07T13:25:20Z"
+      },
+      {
+        "id": 6707526360,
+        "html_url": "https://github.com/Dororo345/ml-cardio-project/issues/16#issuecomment-6707526360",
+        "body": "PR #25 объединён; CI Python 3.11 + Node 22 успешно: https://github.com/Dororo345/ml-cardio-project/actions/runs/42376818260 . JUnit хранится в артефакте test-results. Самопроверка выполнена.",
+        "created_at": "2026-11-07T13:25:57Z",
+        "updated_at": "2026-11-07T13:25:57Z"
+      }
+    ],
+    "issue": {
+      "url": "https://github.com/Dororo345/ml-cardio-project/issues/16",
+      "title": "[ЛЗ9/S1] Автоматические тесты Flask MVP в GitHub Actions",
+      "state": "closed",
+      "created_at": "2026-11-07T12:33:16Z",
+      "updated_at": "2026-11-07T13:26:02Z",
+      "closed_at": "2026-11-07T13:26:02Z"
+    }
+  },
+  {
+    "n": 17,
+    "comments": [
+      {
+        "id": 6707515035,
+        "html_url": "https://github.com/Dororo345/ml-cardio-project/issues/17#issuecomment-6707515035",
+        "body": "FLOW: Ready",
+        "created_at": "2026-11-07T13:24:49Z",
+        "updated_at": "2026-11-07T13:24:49Z"
+      },
+      {
+        "id": 6707515858,
+        "html_url": "https://github.com/Dororo345/ml-cardio-project/issues/17#issuecomment-6707515858",
+        "body": "FLOW: In Progress",
+        "created_at": "2026-11-07T13:24:54Z",
+        "updated_at": "2026-11-07T13:24:54Z"
+      },
+      {
+        "id": 6707532226,
+        "html_url": "https://github.com/Dororo345/ml-cardio-project/issues/17#issuecomment-6707532226",
+        "body": "FLOW: Waiting Review",
+        "created_at": "2026-11-07T13:26:32Z",
+        "updated_at": "2026-11-07T13:26:32Z"
+      },
+      {
+        "id": 6707535201,
+        "html_url": "https://github.com/Dororo345/ml-cardio-project/issues/17#issuecomment-6707535201",
+        "body": "FLOW: Review",
+        "created_at": "2026-11-07T13:26:49Z",
+        "updated_at": "2026-11-07T13:26:49Z"
+      },
+      {
+        "id": 6707536908,
+        "html_url": "https://github.com/Dororo345/ml-cardio-project/issues/17#issuecomment-6707536908",
+        "body": "FLOW: Testing",
+        "created_at": "2026-11-07T13:27:00Z",
+        "updated_at": "2026-11-07T13:27:00Z"
+      },
+      {
+        "id": 6707541797,
+        "html_url": "https://github.com/Dororo345/ml-cardio-project/issues/17#issuecomment-6707541797",
+        "body": "PR #26 объединён. Сквозной HTTP тест: 3 passed; полный pytest: 112 passed. CI: https://github.com/Dororo345/ml-cardio-project/actions/runs/42376973733/job/128416458933. Локальный стенд выполнен; самопроверка отмечена в PR.",
+        "created_at": "2026-11-07T13:27:29Z",
+        "updated_at": "2026-11-07T13:27:29Z"
+      }
+    ],
+    "issue": {
+      "url": "https://github.com/Dororo345/ml-cardio-project/issues/17",
+      "title": "[ЛЗ9/S1] Сквозные проверки корректного и ошибочного прогнозов",
+      "state": "closed",
+      "created_at": "2026-11-07T12:33:18Z",
+      "updated_at": "2026-11-07T13:27:34Z",
+      "closed_at": "2026-11-07T13:27:34Z"
+    }
+  }
+]
