@@ -1,0 +1,29 @@
+﻿source,sprint,issue,status,hours
+simulation,S1,14,Backlog,0.0
+simulation,S1,14,Ready,1.0
+simulation,S1,14,In Progress,6.5
+simulation,S1,14,Waiting Review,5.5
+simulation,S1,14,Review,2.0
+simulation,S1,14,Testing,2.0
+simulation,S1,14,Done,23.0
+simulation,S1,15,Backlog,3.0
+simulation,S1,15,Ready,2.0
+simulation,S1,15,In Progress,7.0
+simulation,S1,15,Waiting Review,8.0
+simulation,S1,15,Review,2.0
+simulation,S1,15,Testing,3.0
+simulation,S1,15,Done,15.0
+simulation,S1,16,Backlog,16.5
+simulation,S1,16,Ready,1.5
+simulation,S1,16,In Progress,7.0
+simulation,S1,16,Waiting Review,4.0
+simulation,S1,16,Review,2.0
+simulation,S1,16,Testing,3.0
+simulation,S1,16,Done,6.0
+simulation,S1,17,Backlog,26.0
+simulation,S1,17,Ready,2.0
+simulation,S1,17,In Progress,6.0
+simulation,S1,17,Waiting Review,2.0
+simulation,S1,17,Review,1.0
+simulation,S1,17,Testing,2.0
+simulation,S1,17,Done,1.0
