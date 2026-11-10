@@ -1,0 +1,27 @@
+﻿source,working_hour,Backlog,Ready,In Progress,Waiting Review,Review,Testing,Done,wip
+simulation,0,3,1,0,0,0,0,0,0
+simulation,0.5,3,0,1,0,0,0,0,1
+simulation,4.0,3,0,0,1,0,0,0,1
+simulation,4.5,3,0,0,0,1,0,0,1
+simulation,5.5,3,0,0,0,0,1,0,1
+simulation,8,3,0,0,0,0,1,0,1
+simulation,9.0,2,1,0,0,0,0,1,0
+simulation,10.0,2,0,1,0,0,0,1,1
+simulation,14.0,2,0,0,1,0,0,1,1
+simulation,14.5,2,0,0,0,1,0,1,1
+simulation,15.5,2,0,0,0,0,1,1,1
+simulation,16,2,0,0,0,0,1,1,1
+simulation,19.0,1,1,0,0,0,0,2,0
+simulation,20.0,1,0,1,0,0,0,2,1
+simulation,23.5,1,0,0,1,0,0,2,1
+simulation,24,1,0,0,1,0,0,2,1
+simulation,24.5,1,0,0,0,1,0,2,1
+simulation,25.5,1,0,0,0,0,1,2,1
+simulation,29.0,0,1,0,0,0,0,3,0
+simulation,30.0,0,0,1,0,0,0,3,1
+simulation,32,0,0,1,0,0,0,3,1
+simulation,34.0,0,0,0,1,0,0,3,1
+simulation,34.5,0,0,0,0,1,0,3,1
+simulation,35.5,0,0,0,0,0,1,3,1
+simulation,39.5,0,0,0,0,0,0,4,0
+simulation,40,0,0,0,0,0,0,4,0

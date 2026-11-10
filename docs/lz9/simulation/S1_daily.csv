@@ -1,0 +1,6 @@
+﻿source,day,date,mean_wip,end_wip,Backlog,Ready,In Progress,Waiting Review,Review,Testing,Done
+simulation,1,2026-11-09,1.25,2,2,0,1,1,0,0,0
+simulation,2,2026-11-10,2.0,2,2,0,0,1,0,1,0
+simulation,3,2026-11-11,1.875,2,1,0,1,0,0,1,1
+simulation,4,2026-11-12,1.625,2,0,0,1,0,0,1,2
+simulation,5,2026-11-13,1.125,0,0,0,0,0,0,0,4

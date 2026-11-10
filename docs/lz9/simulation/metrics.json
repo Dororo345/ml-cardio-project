@@ -1,0 +1,63 @@
+{
+  "source": "simulation",
+  "S1": {
+    "throughput": 4,
+    "rate_day": 0.8,
+    "mean_cycle_h": 15.75,
+    "p85_h": 18.2,
+    "p85_nearest_h": 20.0,
+    "mean_wip": 1.575,
+    "max_wip": 2,
+    "snapshot_wip": 1.6,
+    "over_one_h": 25.0,
+    "little_rhs": 1.5750000000000002,
+    "status_h": {
+      "Backlog": 45.5,
+      "Ready": 6.5,
+      "In Progress": 26.5,
+      "Waiting Review": 19.5,
+      "Review": 7.0,
+      "Testing": 10.0,
+      "Done": 45.0
+    },
+    "status_peaks": {
+      "Backlog": 3,
+      "Ready": 1,
+      "In Progress": 2,
+      "Waiting Review": 2,
+      "Review": 1,
+      "Testing": 1,
+      "Done": 4
+    }
+  },
+  "S2": {
+    "throughput": 4,
+    "rate_day": 0.8,
+    "mean_cycle_h": 9.0,
+    "p85_h": 9.275,
+    "p85_nearest_h": 9.5,
+    "mean_wip": 0.9,
+    "max_wip": 1,
+    "snapshot_wip": 0.8,
+    "over_one_h": 0,
+    "little_rhs": 0.9,
+    "status_h": {
+      "Backlog": 57.0,
+      "Ready": 3.5,
+      "In Progress": 15.0,
+      "Waiting Review": 2.5,
+      "Review": 4.0,
+      "Testing": 14.5,
+      "Done": 63.5
+    },
+    "status_peaks": {
+      "Backlog": 3,
+      "Ready": 1,
+      "In Progress": 1,
+      "Waiting Review": 1,
+      "Review": 1,
+      "Testing": 1,
+      "Done": 4
+    }
+  }
+}
