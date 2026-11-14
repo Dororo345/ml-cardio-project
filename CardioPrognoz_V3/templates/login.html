@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Вход — КардиоПрогноз</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header>
+    <h1>♥ КардиоПрогноз</h1>
+    <p>Вход в учебную систему</p>
+</header>
+<nav class="account-nav">Для доступа к форме расчёта необходимо войти в систему.</nav>
+<main class="container">
+    <section class="card auth-card">
+        <h2>Вход в учётную запись</h2>
+        <p class="description">Введите логин и пароль учебного аккаунта, созданного администратором. После входа откроется страница ввода медицинских показателей.</p>
+        {% if error %}<p class="notice error-message" role="alert">{{ error }}</p>{% endif %}
+        <form action="{{ url_for('login') }}" method="post">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+            <div>
+                <label for="username">Логин</label>
+                <input type="text" name="username" id="username" autocomplete="username" minlength="3" maxlength="32" required autofocus>
+            </div>
+            <div>
+                <label for="password">Пароль</label>
+                <input type="password" name="password" id="password" autocomplete="current-password" required>
+            </div>
+            <button type="submit" class="primary">Войти</button>
+        </form>
+        <p class="muted">Доступ только для тестовых учётных записей. Медицинские данные пациентов не используйте.</p>
+    </section>
+</main>
+</body>
+</html>

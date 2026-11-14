@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>КардиоПрогноз — Версия 3 · Тестовая интеграция</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header><h1>♥ КардиоПрогноз</h1><p>Версия 3 · учебная интеграция, только синтетические данные</p></header>
+<nav class="account-nav" aria-label="Навигация">
+    <span>Пользователь: <strong>{{ current_user['username'] }}</strong></span>
+    <div class="links"><a href="{{ url_for('home') }}">Расчёт вручную</a>
+        {% if current_user['role'] == 'admin' %}<a href="{{ url_for('admin') }}">Администрирование</a>{% endif %}
+        <form method="post" action="{{ url_for('logout') }}">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+        <button type="submit" class="small-button">Выйти</button></form>
+    </div>
+</nav>
+<main class="container">
+<section class="card">
+    <h2>Тестовый обмен с медицинской ИС (CARD-19)</h2>
+    <p class="description">Вместо реальной системы используется отдельный локальный mock-сервис. Он возвращает только 20 заранее созданных синтетических записей. Никаких подключений к больницам или базам пациентов нет.</p>
+    <form method="post" action="{{ url_for('integration_mock') }}" class="mock-form">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+        <label for="record_id"><strong>Синтетический ID</strong></label>
+        <select id="record_id" name="record_id">{% for number in range(1, 21) %}<option value="SYN-{{ '%03d'|format(number) }}">SYN-{{ '%03d'|format(number) }}</option>{% endfor %}</select>
+        <button class="primary" type="submit">Получить тестовую запись и рассчитать</button>
+    </form>
+    <p class="muted">Сервис запускается отдельно командой <code>python mock_medical_service.py</code> на 127.0.0.1:5001. Если он недоступен, приложение покажет понятную ошибку.</p>
+    {% if mode == 'mock' and fetched %}
+    <div class="result"><h3>Тестовая запись {{ fetched.record_id }}</h3>
+        <p>Все 13 полей успешно сопоставлены со схемой ML-модели.</p>
+        <p>Модельная вероятность класса 1: <strong>{{ '%.2f'|format(fetched.score.percent) }}%</strong></p>
+        <p>Предсказанный класс: {{ fetched.score.predicted_class }}</p>
+        {% if fetched.score.warnings %}<p>Есть {{ fetched.score.warnings|length }} учебных предупреждений о сочетаниях показателей.</p>{% endif %}
+        <p class="muted">Учебный результат, не медицинский диагноз.</p>
+    </div>
+    {% endif %}
+</section>
+<section class="card">
+    <h2>Импорт обезличенных тестовых показателей (CARD-20)</h2>
+    <p class="description">Загрузите CSV с 13 документированными колонками. Проверяются структура, допустимые поля и значения; успешные строки рассчитываются с существующей ML-моделью, ошибочные показываются отдельно.</p>
+    <p><a href="{{ url_for('integration_sample') }}">Скачать пример CSV с синтетическими данными</a></p>
+    <form method="post" action="{{ url_for('integration_import') }}" enctype="multipart/form-data" class="mock-form">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+        <label for="csvfile"><strong>CSV-файл (UTF-8, до 64 КБ и 50 строк)</strong></label>
+        <input type="file" id="csvfile" name="file" accept=".csv,text/csv" required>
+        <button class="primary" type="submit">Проверить и рассчитать строки</button>
+    </form>
+    <p class="muted">Обрабатываются только учебные/синтетические данные. Файлы и результаты не сохраняются в базе. Файл с неизвестными колонками (например, ФИО или паспорт) целиком отклоняется.</p>
+    {% if mode == 'csv' and results is not none %}
+    <div class="result">
+        <h3>Результаты импорта</h3>
+        <p>Строк: {{ results|length }}; успешно: {{ results|selectattr('ok')|list|length }}; с ошибками: {{ results|rejectattr('ok')|list|length }}</p>
+        <div class="table-scroll"><table class="account-table"><thead><tr><th>Строка CSV</th><th>Статус</th><th>Результат / Ошибка</th></tr></thead><tbody>
+            {% for row in results %}<tr><td>{{ row.line }}</td><td>{{ 'Пройдено' if row.ok else 'Ошибка' }}</td><td>{% if row.ok %}{{ '%.2f'|format(row.score.percent) }}%, класс {{ row.score.predicted_class }}{% else %}{{ row.error }}{% endif %}</td></tr>{% endfor %}
+        </tbody></table></div>
+    </div>
+    {% endif %}
+</section>
+{% if error %}<section class="card"><div class="notice error-message" role="alert"><strong>Не удалось выполнить операцию:</strong> {{ error }}</div></section>{% endif %}
+</main>
+</body></html>

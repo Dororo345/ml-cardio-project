@@ -1,0 +1,1582 @@
+{
+  "groups": {
+    "nodes": [
+      {
+        "groupValue": "Backlog",
+        "groupId": "Y3Vyc29yOnYyOpLOGMUnyKdCYWNrbG9n",
+        "groupMetadata": {
+          "id": "f75ad846",
+          "name": "Backlog",
+          "nameHtml": "Backlog",
+          "color": "GREEN",
+          "description": "This item hasn't been started",
+          "descriptionHtml": "This item hasn't been started"
+        },
+        "totalCount": {
+          "value": 12,
+          "isApproximate": false
+        },
+        "fieldMetrics": []
+      },
+      {
+        "groupValue": "Ready",
+        "groupId": "Y3Vyc29yOnYyOpLOGMUnyKVSZWFkeQ==",
+        "groupMetadata": {
+          "id": "47fc9ee4",
+          "name": "Ready",
+          "nameHtml": "Ready",
+          "color": "YELLOW",
+          "description": "This is actively being worked on",
+          "descriptionHtml": "This is actively being worked on"
+        },
+        "totalCount": {
+          "value": 0,
+          "isApproximate": false
+        },
+        "fieldMetrics": []
+      },
+      {
+        "groupValue": "In Progress",
+        "groupId": "Y3Vyc29yOnYyOpLOGMUnyKtJbiBQcm9ncmVzcw==",
+        "groupMetadata": {
+          "id": "473a5ee4",
+          "name": "In Progress",
+          "nameHtml": "In Progress",
+          "color": "YELLOW",
+          "description": "",
+          "descriptionHtml": ""
+        },
+        "totalCount": {
+          "value": 0,
+          "isApproximate": false
+        },
+        "fieldMetrics": []
+      },
+      {
+        "groupValue": "Waiting Review",
+        "groupId": "Y3Vyc29yOnYyOpLOGMUnyK5XYWl0aW5nIFJldmlldw==",
+        "groupMetadata": {
+          "id": "31145291",
+          "name": "Waiting Review",
+          "nameHtml": "Waiting Review",
+          "color": "BLUE",
+          "description": "",
+          "descriptionHtml": ""
+        },
+        "totalCount": {
+          "value": 0,
+          "isApproximate": false
+        },
+        "fieldMetrics": []
+      },
+      {
+        "groupValue": "Review",
+        "groupId": "Y3Vyc29yOnYyOpLOGMUnyKZSZXZpZXc=",
+        "groupMetadata": {
+          "id": "9481297a",
+          "name": "Review",
+          "nameHtml": "Review",
+          "color": "GRAY",
+          "description": "",
+          "descriptionHtml": ""
+        },
+        "totalCount": {
+          "value": 0,
+          "isApproximate": false
+        },
+        "fieldMetrics": []
+      },
+      {
+        "groupValue": "Testing",
+        "groupId": "Y3Vyc29yOnYyOpLOGMUnyKdUZXN0aW5n",
+        "groupMetadata": {
+          "id": "9766a36c",
+          "name": "Testing",
+          "nameHtml": "Testing",
+          "color": "ORANGE",
+          "description": "",
+          "descriptionHtml": ""
+        },
+        "totalCount": {
+          "value": 0,
+          "isApproximate": false
+        },
+        "fieldMetrics": []
+      },
+      {
+        "groupValue": "Done",
+        "groupId": "Y3Vyc29yOnYyOpLOGMUnyKREb25l",
+        "groupMetadata": {
+          "id": "98236657",
+          "name": "Done",
+          "nameHtml": "Done",
+          "color": "PURPLE",
+          "description": "Тесты и CI пройдены, PR объединён, критерии завершения подтверждены.",
+          "descriptionHtml": "Тесты и CI пройдены, PR объединён, критерии завершения подтверждены."
+        },
+        "totalCount": {
+          "value": 8,
+          "isApproximate": false
+        },
+        "fieldMetrics": []
+      }
+    ],
+    "pageInfo": {
+      "endCursor": "Y3Vyc29yOnYyOoGmYnVja2V0pERvbmU=",
+      "hasNextPage": false,
+      "hasPreviousPage": false
+    }
+  },
+  "groupedItems": [
+    {
+      "groupId": "Y3Vyc29yOnYyOpLOGMUnyKdCYWNrbG9n",
+      "nodes": [
+        {
+          "contentId": 5540516033,
+          "contentType": "Issue",
+          "contentRepositoryId": 1381623126,
+          "id": 252254767,
+          "priority": null,
+          "virtualPriority": "00000001.0",
+          "updatedAt": "2026-09-22T13:51:42Z",
+          "createdAt": "2026-09-22T13:49:03Z",
+          "agentTasks": null,
+          "issueCreatedAt": "2026-09-22T13:49:31Z",
+          "state": "open",
+          "memexProjectColumnValues": [
+            {
+              "memexProjectColumnId": "Title",
+              "value": {
+                "title": {
+                  "raw": "Сбор и разметка датасета электронных медицинских карт (ЭМК) и результатов ЭКГ.",
+                  "html": "Сбор и разметка датасета электронных медицинских карт (ЭМК) и результатов ЭКГ."
+                },
+                "number": 2,
+                "issueId": 5540516033,
+                "state": "open",
+                "url": "https://github.com/178704641/1381623126/issues/2",
+                "stateReason": null
+              }
+            },
+            {
+              "memexProjectColumnId": "Assignees",
+              "value": []
+            },
+            {
+              "memexProjectColumnId": "Repository",
+              "value": {
+                "id": 1381623126,
+                "isForked": false,
+                "isPublic": true,
+                "isArchived": false,
+                "hasIssues": true,
+                "name": "ml-cardio-project",
+                "owner": "Dororo345",
+                "nameWithOwner": "Dororo345/ml-cardio-project",
+                "url": "https://github.com/Dororo345/ml-cardio-project"
+              }
+            },
+            {
+              "memexProjectColumnId": "Status",
+              "value": {
+                "id": "f75ad846"
+              }
+            },
+            {
+              "memexProjectColumnId": "Linked pull requests",
+              "value": []
+            },
+            {
+              "memexProjectColumnId": "Sub-issues progress",
+              "value": null
+            }
+          ],
+          "content": {
+            "id": 5540516033,
+            "url": "https://github.com/Dororo345/ml-cardio-project/issues/2"
+          },
+          "planningStatus": null
+        },
+        {
+          "contentId": 5540514696,
+          "contentType": "Issue",
+          "contentRepositoryId": 1381623126,
+          "id": 252255020,
+          "priority": null,
+          "virtualPriority": "00000000.5",
+          "updatedAt": "2026-09-22T13:51:59Z",
+          "createdAt": "2026-09-22T13:49:25Z",
+          "agentTasks": null,
+          "issueCreatedAt": "2026-09-22T13:49:24Z",
+          "state": "open",
+          "memexProjectColumnValues": [
+            {
+              "memexProjectColumnId": "Title",
+              "value": {
+                "title": {
+                  "raw": "Очистка датасета от пропусков и удаление аномальных значений (выбросов) по показателям артериального давления и ИМТ.",
+                  "html": "Очистка датасета от пропусков и удаление аномальных значений (выбросов) по показателям артериального давления и ИМТ."
+                },
+                "number": 1,
+                "issueId": 5540514696,
+                "state": "open",
+                "url": "https://github.com/178704641/1381623126/issues/1",
+                "stateReason": null
+              }
+            },
+            {
+              "memexProjectColumnId": "Assignees",
+              "value": []
+            },
+            {
+              "memexProjectColumnId": "Repository",
+              "value": {
+                "id": 1381623126,
+                "isForked": false,
+                "isPublic": true,
+                "isArchived": false,
+                "hasIssues": true,
+                "name": "ml-cardio-project",
+                "owner": "Dororo345",
+                "nameWithOwner": "Dororo345/ml-cardio-project",
+                "url": "https://github.com/Dororo345/ml-cardio-project"
+              }
+            },
+            {
+              "memexProjectColumnId": "Status",
+              "value": {
+                "id": "f75ad846"
+              }
+            },
+            {
+              "memexProjectColumnId": "Linked pull requests",
+              "value": []
+            },
+            {
+              "memexProjectColumnId": "Sub-issues progress",
+              "value": null
+            }
+          ],
+          "content": {
+            "id": 5540514696,
+            "url": "https://github.com/Dororo345/ml-cardio-project/issues/1"
+          },
+          "planningStatus": null
+        },
+        {
+          "contentId": 5540520275,
+          "contentType": "Issue",
+          "contentRepositoryId": 1381623126,
+          "id": 252255487,
+          "priority": null,
+          "virtualPriority": "00000000.3333333333333333",
+          "updatedAt": "2026-09-22T13:52:11Z",
+          "createdAt": "2026-09-22T13:49:53Z",
+          "agentTasks": null,
+          "issueCreatedAt": "2026-09-22T13:49:53Z",
+          "state": "open",
+          "memexProjectColumnValues": [
+            {
+              "memexProjectColumnId": "Title",
+              "value": {
+                "title": {
+                  "raw": "Разведочный анализ данных (EDA) и выявление корреляций между факторами риска.",
+                  "html": "Разведочный анализ данных (EDA) и выявление корреляций между факторами риска."
+                },
+                "number": 3,
+                "issueId": 5540520275,
+                "state": "open",
+                "url": "https://github.com/178704641/1381623126/issues/3",
+                "stateReason": null
+              }
+            },
+            {
+              "memexProjectColumnId": "Assignees",
+              "value": []
+            },
+            {
+              "memexProjectColumnId": "Repository",
+              "value": {
+                "id": 1381623126,
+                "isForked": false,
+                "isPublic": true,
+                "isArchived": false,
+                "hasIssues": true,
+                "name": "ml-cardio-project",
+                "owner": "Dororo345",
+                "nameWithOwner": "Dororo345/ml-cardio-project",
+                "url": "https://github.com/Dororo345/ml-cardio-project"
+              }
+            },
+            {
+              "memexProjectColumnId": "Status",
+              "value": {
+                "id": "f75ad846"
+              }
+            },
+            {
+              "memexProjectColumnId": "Linked pull requests",
+              "value": []
+            },
+            {
+              "memexProjectColumnId": "Sub-issues progress",
+              "value": null
+            }
+          ],
+          "content": {
+            "id": 5540520275,
+            "url": "https://github.com/Dororo345/ml-cardio-project/issues/3"
+          },
+          "planningStatus": null
+        },
+        {
+          "contentId": 5540550718,
+          "contentType": "Issue",
+          "contentRepositoryId": 1381623126,
+          "id": 252257259,
+          "priority": null,
+          "virtualPriority": "00000000.25",
+          "updatedAt": "2026-09-22T13:52:21Z",
+          "createdAt": "2026-09-22T13:52:21Z",
+          "agentTasks": null,
+          "issueCreatedAt": "2026-09-22T13:52:21Z",
+          "state": "open",
+          "memexProjectColumnValues": [
+            {
+              "memexProjectColumnId": "Title",
+              "value": {
+                "title": {
+                  "raw": "Применение метода SMOTE для устранения дисбаланса классов (больные/здоровые пациенты) в обучающей выборке.",
+                  "html": "Применение метода SMOTE для устранения дисбаланса классов (больные/здоровые пациенты) в обучающей выборке."
+                },
+                "number": 4,
+                "issueId": 5540550718,
+                "state": "open",
+                "url": "https://github.com/178704641/1381623126/issues/4",
+                "stateReason": null
+              }
+            },
+            {
+              "memexProjectColumnId": "Assignees",
+              "value": []
+            },
+            {
+              "memexProjectColumnId": "Repository",
+              "value": {
+                "id": 1381623126,
+                "isForked": false,
+                "isPublic": true,
+                "isArchived": false,
+                "hasIssues": true,
+                "name": "ml-cardio-project",
+                "owner": "Dororo345",
+                "nameWithOwner": "Dororo345/ml-cardio-project",
+                "url": "https://github.com/Dororo345/ml-cardio-project"
+              }
+            },
+            {
+              "memexProjectColumnId": "Status",
+              "value": {
+                "id": "f75ad846"
+              }
+            },
+            {
+              "memexProjectColumnId": "Linked pull requests",
+              "value": []
+            },
+            {
+              "memexProjectColumnId": "Sub-issues progress",
+              "value": null
+            }
+          ],
+          "content": {
+            "id": 5540550718,
+            "url": "https://github.com/Dororo345/ml-cardio-project/issues/4"
+          },
+          "planningStatus": null
+        },
+        {
+          "contentId": 5540553659,
+          "contentType": "Issue",
+          "contentRepositoryId": 1381623126,
+          "id": 252257440,
+          "priority": null,
+          "virtualPriority": "00000000.2",
+          "updatedAt": "2026-09-22T13:53:00Z",
+          "createdAt": "2026-09-22T13:52:37Z",
+          "agentTasks": null,
+          "issueCreatedAt": "2026-09-22T13:52:36Z",
+          "state": "open",
+          "memexProjectColumnValues": [
+            {
+              "memexProjectColumnId": "Title",
+              "value": {
+                "title": {
+                  "raw": "Обучение базовой модели Random Forest для первичной классификации риска ишемической болезни сердца.",
+                  "html": "Обучение базовой модели Random Forest для первичной классификации риска ишемической болезни сердца."
+                },
+                "number": 5,
+                "issueId": 5540553659,
+                "state": "open",
+                "url": "https://github.com/178704641/1381623126/issues/5",
+                "stateReason": null
+              }
+            },
+            {
+              "memexProjectColumnId": "Assignees",
+              "value": []
+            },
+            {
+              "memexProjectColumnId": "Repository",
+              "value": {
+                "id": 1381623126,
+                "isForked": false,
+                "isPublic": true,
+                "isArchived": false,
+                "hasIssues": true,
+                "name": "ml-cardio-project",
+                "owner": "Dororo345",
+                "nameWithOwner": "Dororo345/ml-cardio-project",
+                "url": "https://github.com/Dororo345/ml-cardio-project"
+              }
+            },
+            {
+              "memexProjectColumnId": "Status",
+              "value": {
+                "id": "f75ad846"
+              }
+            },
+            {
+              "memexProjectColumnId": "Linked pull requests",
+              "value": []
+            },
+            {
+              "memexProjectColumnId": "Sub-issues progress",
+              "value": null
+            }
+          ],
+          "content": {
+            "id": 5540553659,
+            "url": "https://github.com/Dororo345/ml-cardio-project/issues/5"
+          },
+          "planningStatus": null
+        },
+        {
+          "contentId": 5540555472,
+          "contentType": "Issue",
+          "contentRepositoryId": 1381623126,
+          "id": 252257547,
+          "priority": null,
+          "virtualPriority": "00000000.1666666666666666",
+          "updatedAt": "2026-09-22T13:52:47Z",
+          "createdAt": "2026-09-22T13:52:47Z",
+          "agentTasks": null,
+          "issueCreatedAt": "2026-09-22T13:52:46Z",
+          "state": "open",
+          "memexProjectColumnValues": [
+            {
+              "memexProjectColumnId": "Title",
+              "value": {
+                "title": {
+                  "raw": "Настройка гиперпараметров моделей градиентного бустинга (XGBoost/LightGBM) с помощью GridSearch.",
+                  "html": "Настройка гиперпараметров моделей градиентного бустинга (XGBoost/LightGBM) с помощью GridSearch."
+                },
+                "number": 6,
+                "issueId": 5540555472,
+                "state": "open",
+                "url": "https://github.com/178704641/1381623126/issues/6",
+                "stateReason": null
+              }
+            },
+            {
+              "memexProjectColumnId": "Assignees",
+              "value": []
+            },
+            {
+              "memexProjectColumnId": "Repository",
+              "value": {
+                "id": 1381623126,
+                "isForked": false,
+                "isPublic": true,
+                "isArchived": false,
+                "hasIssues": true,
+                "name": "ml-cardio-project",
+                "owner": "Dororo345",
+                "nameWithOwner": "Dororo345/ml-cardio-project",
+                "url": "https://github.com/Dororo345/ml-cardio-project"
+              }
+            },
+            {
+              "memexProjectColumnId": "Status",
+              "value": {
+                "id": "f75ad846"
+              }
+            },
+            {
+              "memexProjectColumnId": "Linked pull requests",
+              "value": []
+            },
+            {
+              "memexProjectColumnId": "Sub-issues progress",
+              "value": null
+            }
+          ],
+          "content": {
+            "id": 5540555472,
+            "url": "https://github.com/Dororo345/ml-cardio-project/issues/6"
+          },
+          "planningStatus": null
+        },
+        {
+          "contentId": 5540559986,
+          "contentType": "Issue",
+          "contentRepositoryId": 1381623126,
+          "id": 252257766,
+          "priority": null,
+          "virtualPriority": "00000000.1428571428571428",
+          "updatedAt": "2026-09-22T13:53:10Z",
+          "createdAt": "2026-09-22T13:53:10Z",
+          "agentTasks": null,
+          "issueCreatedAt": "2026-09-22T13:53:09Z",
+          "state": "open",
+          "memexProjectColumnValues": [
+            {
+              "memexProjectColumnId": "Title",
+              "value": {
+                "title": {
+                  "raw": "Подключение библиотеки SHAP (Explainable AI) для глобальной интерпретации: выявление наиболее важных факторов риска.",
+                  "html": "Подключение библиотеки SHAP (Explainable AI) для глобальной интерпретации: выявление наиболее важных факторов риска."
+                },
+                "number": 7,
+                "issueId": 5540559986,
+                "state": "open",
+                "url": "https://github.com/178704641/1381623126/issues/7",
+                "stateReason": null
+              }
+            },
+            {
+              "memexProjectColumnId": "Assignees",
+              "value": []
+            },
+            {
+              "memexProjectColumnId": "Repository",
+              "value": {
+                "id": 1381623126,
+                "isForked": false,
+                "isPublic": true,
+                "isArchived": false,
+                "hasIssues": true,
+                "name": "ml-cardio-project",
+                "owner": "Dororo345",
+                "nameWithOwner": "Dororo345/ml-cardio-project",
+                "url": "https://github.com/Dororo345/ml-cardio-project"
+              }
+            },
+            {
+              "memexProjectColumnId": "Status",
+              "value": {
+                "id": "f75ad846"
+              }
+            },
+            {
+              "memexProjectColumnId": "Linked pull requests",
+              "value": []
+            },
+            {
+              "memexProjectColumnId": "Sub-issues progress",
+              "value": null
+            }
+          ],
+          "content": {
+            "id": 5540559986,
+            "url": "https://github.com/Dororo345/ml-cardio-project/issues/7"
+          },
+          "planningStatus": null
+        },
+        {
+          "contentId": 5540561880,
+          "contentType": "Issue",
+          "contentRepositoryId": 1381623126,
+          "id": 252257840,
+          "priority": null,
+          "virtualPriority": "00000000.125",
+          "updatedAt": "2026-09-22T13:53:19Z",
+          "createdAt": "2026-09-22T13:53:19Z",
+          "agentTasks": null,
+          "issueCreatedAt": "2026-09-22T13:53:19Z",
+          "state": "open",
+          "memexProjectColumnValues": [
+            {
+              "memexProjectColumnId": "Title",
+              "value": {
+                "title": {
+                  "raw": "Настройка LIME (Explainable AI) для локальной интерпретации: объяснение решения нейросети по конкретному пациенту.",
+                  "html": "Настройка LIME (Explainable AI) для локальной интерпретации: объяснение решения нейросети по конкретному пациенту."
+                },
+                "number": 8,
+                "issueId": 5540561880,
+                "state": "open",
+                "url": "https://github.com/178704641/1381623126/issues/8",
+                "stateReason": null
+              }
+            },
+            {
+              "memexProjectColumnId": "Assignees",
+              "value": []
+            },
+            {
+              "memexProjectColumnId": "Repository",
+              "value": {
+                "id": 1381623126,
+                "isForked": false,
+                "isPublic": true,
+                "isArchived": false,
+                "hasIssues": true,
+                "name": "ml-cardio-project",
+                "owner": "Dororo345",
+                "nameWithOwner": "Dororo345/ml-cardio-project",
+                "url": "https://github.com/Dororo345/ml-cardio-project"
+              }
+            },
+            {
+              "memexProjectColumnId": "Status",
+              "value": {
+                "id": "f75ad846"
+              }
+            },
+            {
+              "memexProjectColumnId": "Linked pull requests",
+              "value": []
+            },
+            {
+              "memexProjectColumnId": "Sub-issues progress",
+              "value": null
+            }
+          ],
+          "content": {
+            "id": 5540561880,
+            "url": "https://github.com/Dororo345/ml-cardio-project/issues/8"
+          },
+          "planningStatus": null
+        },
+        {
+          "contentId": 5540565404,
+          "contentType": "Issue",
+          "contentRepositoryId": 1381623126,
+          "id": 252258012,
+          "priority": null,
+          "virtualPriority": "00000000.1111111111111111",
+          "updatedAt": "2026-09-22T13:53:37Z",
+          "createdAt": "2026-09-22T13:53:37Z",
+          "agentTasks": null,
+          "issueCreatedAt": "2026-09-22T13:53:36Z",
+          "state": "open",
+          "memexProjectColumnValues": [
+            {
+              "memexProjectColumnId": "Title",
+              "value": {
+                "title": {
+                  "raw": "Проектирование реляционной базы данных для хранения истории прогнозов и профилей пациентов (3 нормальная форма).",
+                  "html": "Проектирование реляционной базы данных для хранения истории прогнозов и профилей пациентов (3 нормальная форма)."
+                },
+                "number": 9,
+                "issueId": 5540565404,
+                "state": "open",
+                "url": "https://github.com/178704641/1381623126/issues/9",
+                "stateReason": null
+              }
+            },
+            {
+              "memexProjectColumnId": "Assignees",
+              "value": []
+            },
+            {
+              "memexProjectColumnId": "Repository",
+              "value": {
+                "id": 1381623126,
+                "isForked": false,
+                "isPublic": true,
+                "isArchived": false,
+                "hasIssues": true,
+                "name": "ml-cardio-project",
+                "owner": "Dororo345",
+                "nameWithOwner": "Dororo345/ml-cardio-project",
+                "url": "https://github.com/Dororo345/ml-cardio-project"
+              }
+            },
+            {
+              "memexProjectColumnId": "Status",
+              "value": {
+                "id": "f75ad846"
+              }
+            },
+            {
+              "memexProjectColumnId": "Linked pull requests",
+              "value": []
+            },
+            {
+              "memexProjectColumnId": "Sub-issues progress",
+              "value": null
+            }
+          ],
+          "content": {
+            "id": 5540565404,
+            "url": "https://github.com/Dororo345/ml-cardio-project/issues/9"
+          },
+          "planningStatus": null
+        },
+        {
+          "contentId": 5540567457,
+          "contentType": "Issue",
+          "contentRepositoryId": 1381623126,
+          "id": 252258103,
+          "priority": null,
+          "virtualPriority": "00000000.1",
+          "updatedAt": "2026-09-22T13:53:46Z",
+          "createdAt": "2026-09-22T13:53:46Z",
+          "agentTasks": null,
+          "issueCreatedAt": "2026-09-22T13:53:45Z",
+          "state": "open",
+          "memexProjectColumnValues": [
+            {
+              "memexProjectColumnId": "Title",
+              "value": {
+                "title": {
+                  "raw": "Разработка REST API на FastAPI для приема медицинских показателей и возврата прогноза от ML-модели.",
+                  "html": "Разработка REST API на FastAPI для приема медицинских показателей и возврата прогноза от ML-модели."
+                },
+                "number": 10,
+                "issueId": 5540567457,
+                "state": "open",
+                "url": "https://github.com/178704641/1381623126/issues/10",
+                "stateReason": null
+              }
+            },
+            {
+              "memexProjectColumnId": "Assignees",
+              "value": []
+            },
+            {
+              "memexProjectColumnId": "Repository",
+              "value": {
+                "id": 1381623126,
+                "isForked": false,
+                "isPublic": true,
+                "isArchived": false,
+                "hasIssues": true,
+                "name": "ml-cardio-project",
+                "owner": "Dororo345",
+                "nameWithOwner": "Dororo345/ml-cardio-project",
+                "url": "https://github.com/Dororo345/ml-cardio-project"
+              }
+            },
+            {
+              "memexProjectColumnId": "Status",
+              "value": {
+                "id": "f75ad846"
+              }
+            },
+            {
+              "memexProjectColumnId": "Linked pull requests",
+              "value": []
+            },
+            {
+              "memexProjectColumnId": "Sub-issues progress",
+              "value": null
+            }
+          ],
+          "content": {
+            "id": 5540567457,
+            "url": "https://github.com/Dororo345/ml-cardio-project/issues/10"
+          },
+          "planningStatus": null
+        },
+        {
+          "contentId": 5540571637,
+          "contentType": "Issue",
+          "contentRepositoryId": 1381623126,
+          "id": 252258322,
+          "priority": null,
+          "virtualPriority": "00000000.0909090909090909",
+          "updatedAt": "2026-09-22T13:54:08Z",
+          "createdAt": "2026-09-22T13:54:08Z",
+          "agentTasks": null,
+          "issueCreatedAt": "2026-09-22T13:54:08Z",
+          "state": "open",
+          "memexProjectColumnValues": [
+            {
+              "memexProjectColumnId": "Title",
+              "value": {
+                "title": {
+                  "raw": "Написание скрипта для генерации PDF-отчета с визуализацией SHAP-графика (понятного для кардиолога)",
+                  "html": "Написание скрипта для генерации PDF-отчета с визуализацией SHAP-графика (понятного для кардиолога)"
+                },
+                "number": 11,
+                "issueId": 5540571637,
+                "state": "open",
+                "url": "https://github.com/178704641/1381623126/issues/11",
+                "stateReason": null
+              }
+            },
+            {
+              "memexProjectColumnId": "Assignees",
+              "value": []
+            },
+            {
+              "memexProjectColumnId": "Repository",
+              "value": {
+                "id": 1381623126,
+                "isForked": false,
+                "isPublic": true,
+                "isArchived": false,
+                "hasIssues": true,
+                "name": "ml-cardio-project",
+                "owner": "Dororo345",
+                "nameWithOwner": "Dororo345/ml-cardio-project",
+                "url": "https://github.com/Dororo345/ml-cardio-project"
+              }
+            },
+            {
+              "memexProjectColumnId": "Status",
+              "value": {
+                "id": "f75ad846"
+              }
+            },
+            {
+              "memexProjectColumnId": "Linked pull requests",
+              "value": []
+            },
+            {
+              "memexProjectColumnId": "Sub-issues progress",
+              "value": null
+            }
+          ],
+          "content": {
+            "id": 5540571637,
+            "url": "https://github.com/Dororo345/ml-cardio-project/issues/11"
+          },
+          "planningStatus": null
+        },
+        {
+          "contentId": 5540575422,
+          "contentType": "Issue",
+          "contentRepositoryId": 1381623126,
+          "id": 252258532,
+          "priority": null,
+          "virtualPriority": "00000000.0833333333333333",
+          "updatedAt": "2026-09-22T13:54:28Z",
+          "createdAt": "2026-09-22T13:54:28Z",
+          "agentTasks": null,
+          "issueCreatedAt": "2026-09-22T13:54:28Z",
+          "state": "open",
+          "memexProjectColumnValues": [
+            {
+              "memexProjectColumnId": "Title",
+              "value": {
+                "title": {
+                  "raw": "Упаковка ML-модели и серверной части в Docker-контейнер для подготовки к развертыванию.",
+                  "html": "Упаковка ML-модели и серверной части в Docker-контейнер для подготовки к развертыванию."
+                },
+                "number": 12,
+                "issueId": 5540575422,
+                "state": "open",
+                "url": "https://github.com/178704641/1381623126/issues/12",
+                "stateReason": null
+              }
+            },
+            {
+              "memexProjectColumnId": "Assignees",
+              "value": []
+            },
+            {
+              "memexProjectColumnId": "Repository",
+              "value": {
+                "id": 1381623126,
+                "isForked": false,
+                "isPublic": true,
+                "isArchived": false,
+                "hasIssues": true,
+                "name": "ml-cardio-project",
+                "owner": "Dororo345",
+                "nameWithOwner": "Dororo345/ml-cardio-project",
+                "url": "https://github.com/Dororo345/ml-cardio-project"
+              }
+            },
+            {
+              "memexProjectColumnId": "Status",
+              "value": {
+                "id": "f75ad846"
+              }
+            },
+            {
+              "memexProjectColumnId": "Linked pull requests",
+              "value": []
+            },
+            {
+              "memexProjectColumnId": "Sub-issues progress",
+              "value": null
+            }
+          ],
+          "content": {
+            "id": 5540575422,
+            "url": "https://github.com/Dororo345/ml-cardio-project/issues/12"
+          },
+          "planningStatus": null
+        }
+      ],
+      "pageInfo": {
+        "startCursor": "Y3Vyc29yOnYyOpKqMDAwMDAwMDEuMM4PCRov",
+        "endCursor": "Y3Vyc29yOnYyOpK5MDAwMDAwMDAuMDgzMzMzMzMzMzMzMzMzM84PCSjk",
+        "hasNextPage": false,
+        "hasPreviousPage": false
+      }
+    },
+    {
+      "groupId": "Y3Vyc29yOnYyOpLOGMUnyKVSZWFkeQ==",
+      "nodes": [],
+      "pageInfo": {
+        "hasNextPage": false,
+        "hasPreviousPage": false
+      }
+    },
+    {
+      "groupId": "Y3Vyc29yOnYyOpLOGMUnyKtJbiBQcm9ncmVzcw==",
+      "nodes": [],
+      "pageInfo": {
+        "hasNextPage": false,
+        "hasPreviousPage": false
+      }
+    },
+    {
+      "groupId": "Y3Vyc29yOnYyOpLOGMUnyK5XYWl0aW5nIFJldmlldw==",
+      "nodes": [],
+      "pageInfo": {
+        "hasNextPage": false,
+        "hasPreviousPage": false
+      }
+    },
+    {
+      "groupId": "Y3Vyc29yOnYyOpLOGMUnyKZSZXZpZXc=",
+      "nodes": [],
+      "pageInfo": {
+        "hasNextPage": false,
+        "hasPreviousPage": false
+      }
+    },
+    {
+      "groupId": "Y3Vyc29yOnYyOpLOGMUnyKdUZXN0aW5n",
+      "nodes": [],
+      "pageInfo": {
+        "hasNextPage": false,
+        "hasPreviousPage": false
+      }
+    },
+    {
+      "groupId": "Y3Vyc29yOnYyOpLOGMUnyKREb25l",
+      "nodes": [
+        {
+          "contentId": 6259090454,
+          "contentType": "Issue",
+          "contentRepositoryId": 1381623126,
+          "id": 296885277,
+          "priority": null,
+          "virtualPriority": "00000000.0769230769230769",
+          "updatedAt": "2026-11-07T13:21:44Z",
+          "createdAt": "2026-11-07T12:33:15Z",
+          "agentTasks": null,
+          "issueCreatedAt": "2026-11-07T12:33:12Z",
+          "issueClosedAt": "2026-11-07T13:21:43Z",
+          "state": "closed",
+          "memexProjectColumnValues": [
+            {
+              "memexProjectColumnId": "Title",
+              "value": {
+                "title": {
+                  "raw": "[ЛЗ9/S1] Контракт ошибок `/predict` соответствует документации",
+                  "html": "[ЛЗ9/S1] Контракт ошибок <code>/predict</code> соответствует документации"
+                },
+                "number": 14,
+                "issueId": 6259090454,
+                "state": "closed",
+                "url": "https://github.com/178704641/1381623126/issues/14",
+                "stateReason": null
+              }
+            },
+            {
+              "memexProjectColumnId": "Assignees",
+              "value": [
+                {
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/178704641?s=40&v=4",
+                  "id": 178704641,
+                  "login": "Dororo345",
+                  "url": "https://github.com/Dororo345"
+                }
+              ]
+            },
+            {
+              "memexProjectColumnId": "Repository",
+              "value": {
+                "id": 1381623126,
+                "isForked": false,
+                "isPublic": true,
+                "isArchived": false,
+                "hasIssues": true,
+                "name": "ml-cardio-project",
+                "owner": "Dororo345",
+                "nameWithOwner": "Dororo345/ml-cardio-project",
+                "url": "https://github.com/Dororo345/ml-cardio-project"
+              }
+            },
+            {
+              "memexProjectColumnId": "Status",
+              "value": {
+                "id": "98236657"
+              }
+            },
+            {
+              "memexProjectColumnId": "Linked pull requests",
+              "value": []
+            },
+            {
+              "memexProjectColumnId": "Sub-issues progress",
+              "value": null
+            }
+          ],
+          "content": {
+            "id": 6259090454,
+            "url": "https://github.com/Dororo345/ml-cardio-project/issues/14"
+          },
+          "planningStatus": null
+        },
+        {
+          "contentId": 6259090731,
+          "contentType": "Issue",
+          "contentRepositoryId": 1381623126,
+          "id": 296885283,
+          "priority": null,
+          "virtualPriority": "00000000.0714285714285714",
+          "updatedAt": "2026-11-07T13:23:57Z",
+          "createdAt": "2026-11-07T12:33:16Z",
+          "agentTasks": null,
+          "issueCreatedAt": "2026-11-07T12:33:14Z",
+          "issueClosedAt": "2026-11-07T13:23:55Z",
+          "state": "closed",
+          "memexProjectColumnValues": [
+            {
+              "memexProjectColumnId": "Title",
+              "value": {
+                "title": {
+                  "raw": "[ЛЗ9/S1] Понятные сообщения об ошибках отдельных полей формы",
+                  "html": "[ЛЗ9/S1] Понятные сообщения об ошибках отдельных полей формы"
+                },
+                "number": 15,
+                "issueId": 6259090731,
+                "state": "closed",
+                "url": "https://github.com/178704641/1381623126/issues/15",
+                "stateReason": null
+              }
+            },
+            {
+              "memexProjectColumnId": "Assignees",
+              "value": [
+                {
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/178704641?s=40&v=4",
+                  "id": 178704641,
+                  "login": "Dororo345",
+                  "url": "https://github.com/Dororo345"
+                }
+              ]
+            },
+            {
+              "memexProjectColumnId": "Repository",
+              "value": {
+                "id": 1381623126,
+                "isForked": false,
+                "isPublic": true,
+                "isArchived": false,
+                "hasIssues": true,
+                "name": "ml-cardio-project",
+                "owner": "Dororo345",
+                "nameWithOwner": "Dororo345/ml-cardio-project",
+                "url": "https://github.com/Dororo345/ml-cardio-project"
+              }
+            },
+            {
+              "memexProjectColumnId": "Status",
+              "value": {
+                "id": "98236657"
+              }
+            },
+            {
+              "memexProjectColumnId": "Linked pull requests",
+              "value": []
+            },
+            {
+              "memexProjectColumnId": "Sub-issues progress",
+              "value": null
+            }
+          ],
+          "content": {
+            "id": 6259090731,
+            "url": "https://github.com/Dororo345/ml-cardio-project/issues/15"
+          },
+          "planningStatus": null
+        },
+        {
+          "contentId": 6259091045,
+          "contentType": "Issue",
+          "contentRepositoryId": 1381623126,
+          "id": 296885306,
+          "priority": null,
+          "virtualPriority": "00000000.0666666666666666",
+          "updatedAt": "2026-11-07T13:26:04Z",
+          "createdAt": "2026-11-07T12:33:18Z",
+          "agentTasks": null,
+          "issueCreatedAt": "2026-11-07T12:33:16Z",
+          "issueClosedAt": "2026-11-07T13:26:02Z",
+          "state": "closed",
+          "memexProjectColumnValues": [
+            {
+              "memexProjectColumnId": "Title",
+              "value": {
+                "title": {
+                  "raw": "[ЛЗ9/S1] Автоматические тесты Flask MVP в GitHub Actions",
+                  "html": "[ЛЗ9/S1] Автоматические тесты Flask MVP в GitHub Actions"
+                },
+                "number": 16,
+                "issueId": 6259091045,
+                "state": "closed",
+                "url": "https://github.com/178704641/1381623126/issues/16",
+                "stateReason": null
+              }
+            },
+            {
+              "memexProjectColumnId": "Assignees",
+              "value": [
+                {
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/178704641?s=40&v=4",
+                  "id": 178704641,
+                  "login": "Dororo345",
+                  "url": "https://github.com/Dororo345"
+                }
+              ]
+            },
+            {
+              "memexProjectColumnId": "Repository",
+              "value": {
+                "id": 1381623126,
+                "isForked": false,
+                "isPublic": true,
+                "isArchived": false,
+                "hasIssues": true,
+                "name": "ml-cardio-project",
+                "owner": "Dororo345",
+                "nameWithOwner": "Dororo345/ml-cardio-project",
+                "url": "https://github.com/Dororo345/ml-cardio-project"
+              }
+            },
+            {
+              "memexProjectColumnId": "Status",
+              "value": {
+                "id": "98236657"
+              }
+            },
+            {
+              "memexProjectColumnId": "Linked pull requests",
+              "value": []
+            },
+            {
+              "memexProjectColumnId": "Sub-issues progress",
+              "value": null
+            }
+          ],
+          "content": {
+            "id": 6259091045,
+            "url": "https://github.com/Dororo345/ml-cardio-project/issues/16"
+          },
+          "planningStatus": null
+        },
+        {
+          "contentId": 6259091383,
+          "contentType": "Issue",
+          "contentRepositoryId": 1381623126,
+          "id": 296885334,
+          "priority": null,
+          "virtualPriority": "00000000.0625",
+          "updatedAt": "2026-11-07T13:27:35Z",
+          "createdAt": "2026-11-07T12:33:21Z",
+          "agentTasks": null,
+          "issueCreatedAt": "2026-11-07T12:33:18Z",
+          "issueClosedAt": "2026-11-07T13:27:34Z",
+          "state": "closed",
+          "memexProjectColumnValues": [
+            {
+              "memexProjectColumnId": "Title",
+              "value": {
+                "title": {
+                  "raw": "[ЛЗ9/S1] Сквозные проверки корректного и ошибочного прогнозов",
+                  "html": "[ЛЗ9/S1] Сквозные проверки корректного и ошибочного прогнозов"
+                },
+                "number": 17,
+                "issueId": 6259091383,
+                "state": "closed",
+                "url": "https://github.com/178704641/1381623126/issues/17",
+                "stateReason": null
+              }
+            },
+            {
+              "memexProjectColumnId": "Assignees",
+              "value": [
+                {
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/178704641?s=40&v=4",
+                  "id": 178704641,
+                  "login": "Dororo345",
+                  "url": "https://github.com/Dororo345"
+                }
+              ]
+            },
+            {
+              "memexProjectColumnId": "Repository",
+              "value": {
+                "id": 1381623126,
+                "isForked": false,
+                "isPublic": true,
+                "isArchived": false,
+                "hasIssues": true,
+                "name": "ml-cardio-project",
+                "owner": "Dororo345",
+                "nameWithOwner": "Dororo345/ml-cardio-project",
+                "url": "https://github.com/Dororo345/ml-cardio-project"
+              }
+            },
+            {
+              "memexProjectColumnId": "Status",
+              "value": {
+                "id": "98236657"
+              }
+            },
+            {
+              "memexProjectColumnId": "Linked pull requests",
+              "value": []
+            },
+            {
+              "memexProjectColumnId": "Sub-issues progress",
+              "value": null
+            }
+          ],
+          "content": {
+            "id": 6259091383,
+            "url": "https://github.com/Dororo345/ml-cardio-project/issues/17"
+          },
+          "planningStatus": null
+        },
+        {
+          "contentId": 6259091710,
+          "contentType": "Issue",
+          "contentRepositoryId": 1381623126,
+          "id": 296885354,
+          "priority": null,
+          "virtualPriority": "00000000.0588235294117647",
+          "updatedAt": "2026-11-07T13:31:40Z",
+          "createdAt": "2026-11-07T12:33:22Z",
+          "agentTasks": null,
+          "issueCreatedAt": "2026-11-07T12:33:20Z",
+          "issueClosedAt": "2026-11-07T13:31:38Z",
+          "state": "closed",
+          "memexProjectColumnValues": [
+            {
+              "memexProjectColumnId": "Title",
+              "value": {
+                "title": {
+                  "raw": "[ЛЗ9/S2] Сбой XAI не подменяет результат вымышленными факторами",
+                  "html": "[ЛЗ9/S2] Сбой XAI не подменяет результат вымышленными факторами"
+                },
+                "number": 18,
+                "issueId": 6259091710,
+                "state": "closed",
+                "url": "https://github.com/178704641/1381623126/issues/18",
+                "stateReason": null
+              }
+            },
+            {
+              "memexProjectColumnId": "Assignees",
+              "value": [
+                {
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/178704641?s=40&v=4",
+                  "id": 178704641,
+                  "login": "Dororo345",
+                  "url": "https://github.com/Dororo345"
+                }
+              ]
+            },
+            {
+              "memexProjectColumnId": "Repository",
+              "value": {
+                "id": 1381623126,
+                "isForked": false,
+                "isPublic": true,
+                "isArchived": false,
+                "hasIssues": true,
+                "name": "ml-cardio-project",
+                "owner": "Dororo345",
+                "nameWithOwner": "Dororo345/ml-cardio-project",
+                "url": "https://github.com/Dororo345/ml-cardio-project"
+              }
+            },
+            {
+              "memexProjectColumnId": "Status",
+              "value": {
+                "id": "98236657"
+              }
+            },
+            {
+              "memexProjectColumnId": "Linked pull requests",
+              "value": []
+            },
+            {
+              "memexProjectColumnId": "Sub-issues progress",
+              "value": null
+            }
+          ],
+          "content": {
+            "id": 6259091710,
+            "url": "https://github.com/Dororo345/ml-cardio-project/issues/18"
+          },
+          "planningStatus": null
+        },
+        {
+          "contentId": 6259092098,
+          "contentType": "Issue",
+          "contentRepositoryId": 1381623126,
+          "id": 296885390,
+          "priority": null,
+          "virtualPriority": "00000000.0555555555555555",
+          "updatedAt": "2026-11-07T13:34:36Z",
+          "createdAt": "2026-11-07T12:33:25Z",
+          "agentTasks": null,
+          "issueCreatedAt": "2026-11-07T12:33:22Z",
+          "issueClosedAt": "2026-11-07T13:34:34Z",
+          "state": "closed",
+          "memexProjectColumnValues": [
+            {
+              "memexProjectColumnId": "Title",
+              "value": {
+                "title": {
+                  "raw": "[ЛЗ9/S2] Проверка очистки формы в браузере",
+                  "html": "[ЛЗ9/S2] Проверка очистки формы в браузере"
+                },
+                "number": 19,
+                "issueId": 6259092098,
+                "state": "closed",
+                "url": "https://github.com/178704641/1381623126/issues/19",
+                "stateReason": null
+              }
+            },
+            {
+              "memexProjectColumnId": "Assignees",
+              "value": [
+                {
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/178704641?s=40&v=4",
+                  "id": 178704641,
+                  "login": "Dororo345",
+                  "url": "https://github.com/Dororo345"
+                }
+              ]
+            },
+            {
+              "memexProjectColumnId": "Repository",
+              "value": {
+                "id": 1381623126,
+                "isForked": false,
+                "isPublic": true,
+                "isArchived": false,
+                "hasIssues": true,
+                "name": "ml-cardio-project",
+                "owner": "Dororo345",
+                "nameWithOwner": "Dororo345/ml-cardio-project",
+                "url": "https://github.com/Dororo345/ml-cardio-project"
+              }
+            },
+            {
+              "memexProjectColumnId": "Status",
+              "value": {
+                "id": "98236657"
+              }
+            },
+            {
+              "memexProjectColumnId": "Linked pull requests",
+              "value": []
+            },
+            {
+              "memexProjectColumnId": "Sub-issues progress",
+              "value": null
+            }
+          ],
+          "content": {
+            "id": 6259092098,
+            "url": "https://github.com/Dororo345/ml-cardio-project/issues/19"
+          },
+          "planningStatus": null
+        },
+        {
+          "contentId": 6259092484,
+          "contentType": "Issue",
+          "contentRepositoryId": 1381623126,
+          "id": 296885415,
+          "priority": null,
+          "virtualPriority": "00000000.0526315789473684",
+          "updatedAt": "2026-11-07T13:37:12Z",
+          "createdAt": "2026-11-07T12:33:27Z",
+          "agentTasks": null,
+          "issueCreatedAt": "2026-11-07T12:33:25Z",
+          "issueClosedAt": "2026-11-07T13:37:10Z",
+          "state": "closed",
+          "memexProjectColumnValues": [
+            {
+              "memexProjectColumnId": "Title",
+              "value": {
+                "title": {
+                  "raw": "[ЛЗ9/S2] Версия ML-модели указывается в контракте API",
+                  "html": "[ЛЗ9/S2] Версия ML-модели указывается в контракте API"
+                },
+                "number": 20,
+                "issueId": 6259092484,
+                "state": "closed",
+                "url": "https://github.com/178704641/1381623126/issues/20",
+                "stateReason": null
+              }
+            },
+            {
+              "memexProjectColumnId": "Assignees",
+              "value": [
+                {
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/178704641?s=40&v=4",
+                  "id": 178704641,
+                  "login": "Dororo345",
+                  "url": "https://github.com/Dororo345"
+                }
+              ]
+            },
+            {
+              "memexProjectColumnId": "Repository",
+              "value": {
+                "id": 1381623126,
+                "isForked": false,
+                "isPublic": true,
+                "isArchived": false,
+                "hasIssues": true,
+                "name": "ml-cardio-project",
+                "owner": "Dororo345",
+                "nameWithOwner": "Dororo345/ml-cardio-project",
+                "url": "https://github.com/Dororo345/ml-cardio-project"
+              }
+            },
+            {
+              "memexProjectColumnId": "Status",
+              "value": {
+                "id": "98236657"
+              }
+            },
+            {
+              "memexProjectColumnId": "Linked pull requests",
+              "value": []
+            },
+            {
+              "memexProjectColumnId": "Sub-issues progress",
+              "value": null
+            }
+          ],
+          "content": {
+            "id": 6259092484,
+            "url": "https://github.com/Dororo345/ml-cardio-project/issues/20"
+          },
+          "planningStatus": null
+        },
+        {
+          "contentId": 6259092839,
+          "contentType": "Issue",
+          "contentRepositoryId": 1381623126,
+          "id": 296885429,
+          "priority": null,
+          "virtualPriority": "00000000.05",
+          "updatedAt": "2026-11-07T13:40:10Z",
+          "createdAt": "2026-11-07T12:33:29Z",
+          "agentTasks": null,
+          "issueCreatedAt": "2026-11-07T12:33:27Z",
+          "issueClosedAt": "2026-11-07T13:40:08Z",
+          "state": "closed",
+          "memexProjectColumnValues": [
+            {
+              "memexProjectColumnId": "Title",
+              "value": {
+                "title": {
+                  "raw": "[ЛЗ9/S2] 50 синтетических сценариев сквозной приёмки",
+                  "html": "[ЛЗ9/S2] 50 синтетических сценариев сквозной приёмки"
+                },
+                "number": 21,
+                "issueId": 6259092839,
+                "state": "closed",
+                "url": "https://github.com/178704641/1381623126/issues/21",
+                "stateReason": null
+              }
+            },
+            {
+              "memexProjectColumnId": "Assignees",
+              "value": [
+                {
+                  "avatarUrl": "https://avatars.githubusercontent.com/u/178704641?s=40&v=4",
+                  "id": 178704641,
+                  "login": "Dororo345",
+                  "url": "https://github.com/Dororo345"
+                }
+              ]
+            },
+            {
+              "memexProjectColumnId": "Repository",
+              "value": {
+                "id": 1381623126,
+                "isForked": false,
+                "isPublic": true,
+                "isArchived": false,
+                "hasIssues": true,
+                "name": "ml-cardio-project",
+                "owner": "Dororo345",
+                "nameWithOwner": "Dororo345/ml-cardio-project",
+                "url": "https://github.com/Dororo345/ml-cardio-project"
+              }
+            },
+            {
+              "memexProjectColumnId": "Status",
+              "value": {
+                "id": "98236657"
+              }
+            },
+            {
+              "memexProjectColumnId": "Linked pull requests",
+              "value": []
+            },
+            {
+              "memexProjectColumnId": "Sub-issues progress",
+              "value": null
+            }
+          ],
+          "content": {
+            "id": 6259092839,
+            "url": "https://github.com/Dororo345/ml-cardio-project/issues/21"
+          },
+          "planningStatus": null
+        }
+      ],
+      "pageInfo": {
+        "startCursor": "Y3Vyc29yOnYyOpK5MDAwMDAwMDAuMDc2OTIzMDc2OTIzMDc2Oc4Rshwd",
+        "endCursor": "Y3Vyc29yOnYyOpKrMDAwMDAwMDAuMDXOEbIctQ==",
+        "hasNextPage": false,
+        "hasPreviousPage": false
+      }
+    }
+  ],
+  "totalCount": {
+    "value": 20,
+    "isApproximate": false
+  }
+}

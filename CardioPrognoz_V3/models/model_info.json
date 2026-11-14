@@ -1,0 +1,42 @@
+{
+  "dataset": "UCI Heart Disease (Cleveland), id=45",
+  "input_features": [
+    "age",
+    "sex",
+    "cp",
+    "trestbps",
+    "chol",
+    "fbs",
+    "restecg",
+    "thalach",
+    "exang",
+    "oldpeak",
+    "slope",
+    "ca",
+    "thal"
+  ],
+  "numeric_features": [
+    "age",
+    "trestbps",
+    "chol",
+    "thalach",
+    "oldpeak"
+  ],
+  "categorical_features": [
+    "sex",
+    "cp",
+    "fbs",
+    "restecg",
+    "exang",
+    "slope",
+    "ca",
+    "thal"
+  ],
+  "target": "presence_of_heart_disease_binary",
+  "target_mapping": {
+    "0": "нет в разметке",
+    "1": "есть в разметке"
+  },
+  "important_warning": "Исследовательский прототип, не медицинский диагноз и не будущий риск",
+  "sklearn_version": "1.6.1"
+}

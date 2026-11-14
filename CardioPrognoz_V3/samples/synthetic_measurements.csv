@@ -1,0 +1,4 @@
+age_years,sex_code,chest_pain_code,resting_bp,cholesterol,fasting_sugar_flag,rest_ecg_code,max_heart_rate,exercise_angina_flag,st_depression,st_slope_code,vessels_code,thal_code
+59,1,4,138,271,0,2,182,0,0.0,1,0,3
+42,1,4,126,205,0,2,182,0,0.0,1,0,3
+67,1,4,160,300,0,2,182,0,0.0,1,0,3

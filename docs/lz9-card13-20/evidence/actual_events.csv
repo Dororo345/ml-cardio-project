@@ -1,0 +1,29 @@
+﻿source,event,timestamp_utc,github_issue,title,url,observed_at_utc
+github_api,created,2026-11-07T12:33:27Z,21,[ЛЗ9/S2] 50 синтетических сценариев сквозной приёмки,https://github.com/Dororo345/ml-cardio-project/issues/21,2026-11-14T13:29:17.332066+00:00
+github_api,closed,2026-11-07T13:40:08Z,21,[ЛЗ9/S2] 50 синтетических сценариев сквозной приёмки,https://github.com/Dororo345/ml-cardio-project/issues/21,2026-11-14T13:29:17.332066+00:00
+github_api,created,2026-11-07T12:33:25Z,20,[ЛЗ9/S2] Версия ML-модели указывается в контракте API,https://github.com/Dororo345/ml-cardio-project/issues/20,2026-11-14T13:29:17.332066+00:00
+github_api,closed,2026-11-07T13:37:10Z,20,[ЛЗ9/S2] Версия ML-модели указывается в контракте API,https://github.com/Dororo345/ml-cardio-project/issues/20,2026-11-14T13:29:17.332066+00:00
+github_api,created,2026-11-07T12:33:22Z,19,[ЛЗ9/S2] Проверка очистки формы в браузере,https://github.com/Dororo345/ml-cardio-project/issues/19,2026-11-14T13:29:17.332066+00:00
+github_api,closed,2026-11-07T13:34:34Z,19,[ЛЗ9/S2] Проверка очистки формы в браузере,https://github.com/Dororo345/ml-cardio-project/issues/19,2026-11-14T13:29:17.332066+00:00
+github_api,created,2026-11-07T12:33:20Z,18,[ЛЗ9/S2] Сбой XAI не подменяет результат вымышленными факторами,https://github.com/Dororo345/ml-cardio-project/issues/18,2026-11-14T13:29:17.332066+00:00
+github_api,closed,2026-11-07T13:31:38Z,18,[ЛЗ9/S2] Сбой XAI не подменяет результат вымышленными факторами,https://github.com/Dororo345/ml-cardio-project/issues/18,2026-11-14T13:29:17.332066+00:00
+github_api,created,2026-11-07T12:33:18Z,17,[ЛЗ9/S1] Сквозные проверки корректного и ошибочного прогнозов,https://github.com/Dororo345/ml-cardio-project/issues/17,2026-11-14T13:29:17.332066+00:00
+github_api,closed,2026-11-07T13:27:34Z,17,[ЛЗ9/S1] Сквозные проверки корректного и ошибочного прогнозов,https://github.com/Dororo345/ml-cardio-project/issues/17,2026-11-14T13:29:17.332066+00:00
+github_api,created,2026-11-07T12:33:16Z,16,[ЛЗ9/S1] Автоматические тесты Flask MVP в GitHub Actions,https://github.com/Dororo345/ml-cardio-project/issues/16,2026-11-14T13:29:17.332066+00:00
+github_api,closed,2026-11-07T13:26:02Z,16,[ЛЗ9/S1] Автоматические тесты Flask MVP в GitHub Actions,https://github.com/Dororo345/ml-cardio-project/issues/16,2026-11-14T13:29:17.332066+00:00
+github_api,created,2026-11-07T12:33:14Z,15,[ЛЗ9/S1] Понятные сообщения об ошибках отдельных полей формы,https://github.com/Dororo345/ml-cardio-project/issues/15,2026-11-14T13:29:17.332066+00:00
+github_api,closed,2026-11-07T13:23:55Z,15,[ЛЗ9/S1] Понятные сообщения об ошибках отдельных полей формы,https://github.com/Dororo345/ml-cardio-project/issues/15,2026-11-14T13:29:17.332066+00:00
+github_api,created,2026-11-07T12:33:12Z,14,[ЛЗ9/S1] Контракт ошибок `/predict` соответствует документации,https://github.com/Dororo345/ml-cardio-project/issues/14,2026-11-14T13:29:17.332066+00:00
+github_api,closed,2026-11-07T13:21:43Z,14,[ЛЗ9/S1] Контракт ошибок `/predict` соответствует документации,https://github.com/Dororo345/ml-cardio-project/issues/14,2026-11-14T13:29:17.332066+00:00
+github_api,created,2026-09-22T13:54:28Z,12,Упаковка ML-модели и серверной части в Docker-контейнер для подготовки к развертыванию.,https://github.com/Dororo345/ml-cardio-project/issues/12,2026-11-14T13:29:17.332066+00:00
+github_api,created,2026-09-22T13:54:08Z,11,Написание скрипта для генерации PDF-отчета с визуализацией SHAP-графика (понятного для кардиолога),https://github.com/Dororo345/ml-cardio-project/issues/11,2026-11-14T13:29:17.332066+00:00
+github_api,created,2026-09-22T13:53:45Z,10,Разработка REST API на FastAPI для приема медицинских показателей и возврата прогноза от ML-модели.,https://github.com/Dororo345/ml-cardio-project/issues/10,2026-11-14T13:29:17.332066+00:00
+github_api,created,2026-09-22T13:53:36Z,9,Проектирование реляционной базы данных для хранения истории прогнозов и профилей пациентов (3 нормальная форма).,https://github.com/Dororo345/ml-cardio-project/issues/9,2026-11-14T13:29:17.332066+00:00
+github_api,created,2026-09-22T13:53:19Z,8,Настройка LIME (Explainable AI) для локальной интерпретации: объяснение решения нейросети по конкретному пациенту.,https://github.com/Dororo345/ml-cardio-project/issues/8,2026-11-14T13:29:17.332066+00:00
+github_api,created,2026-09-22T13:53:09Z,7,Подключение библиотеки SHAP (Explainable AI) для глобальной интерпретации: выявление наиболее важных факторов риска.,https://github.com/Dororo345/ml-cardio-project/issues/7,2026-11-14T13:29:17.332066+00:00
+github_api,created,2026-09-22T13:52:46Z,6,Настройка гиперпараметров моделей градиентного бустинга (XGBoost/LightGBM) с помощью GridSearch.,https://github.com/Dororo345/ml-cardio-project/issues/6,2026-11-14T13:29:17.332066+00:00
+github_api,created,2026-09-22T13:52:36Z,5,Обучение базовой модели Random Forest для первичной классификации риска ишемической болезни сердца.,https://github.com/Dororo345/ml-cardio-project/issues/5,2026-11-14T13:29:17.332066+00:00
+github_api,created,2026-09-22T13:52:21Z,4,Применение метода SMOTE для устранения дисбаланса классов (больные/здоровые пациенты) в обучающей выборке.,https://github.com/Dororo345/ml-cardio-project/issues/4,2026-11-14T13:29:17.332066+00:00
+github_api,created,2026-09-22T13:49:53Z,3,Разведочный анализ данных (EDA) и выявление корреляций между факторами риска.,https://github.com/Dororo345/ml-cardio-project/issues/3,2026-11-14T13:29:17.332066+00:00
+github_api,created,2026-09-22T13:49:31Z,2,Сбор и разметка датасета электронных медицинских карт (ЭМК) и результатов ЭКГ.,https://github.com/Dororo345/ml-cardio-project/issues/2,2026-11-14T13:29:17.332066+00:00
+github_api,created,2026-09-22T13:49:24Z,1,Очистка датасета от пропусков и удаление аномальных значений (выбросов) по показателям артериального давления и ИМТ.,https://github.com/Dororo345/ml-cardio-project/issues/1,2026-11-14T13:29:17.332066+00:00
