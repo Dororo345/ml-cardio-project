@@ -1,0 +1,12 @@
+{
+  "cv_roc_auc_mean": 0.9024931590148981,
+  "cv_roc_auc_std": 0.01443995119614911,
+  "test_roc_auc": 0.9664502164502166,
+  "test_accuracy": 0.8852459016393442,
+  "test_precision": 0.8387096774193549,
+  "test_recall": 0.9285714285714286,
+  "test_f1": 0.8813559322033898,
+  "test_brier_score": 0.07974344229452762,
+  "train_samples": 242,
+  "test_samples": 61
+}

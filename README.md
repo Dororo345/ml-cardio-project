@@ -1,3 +1,11 @@
+## ЛЗ 9 Авторизация и тестовая интеграция версии 3
+
+Актуальная сборка пяти историй размещена в **[CardioPrognoz_V3](CardioPrognoz_V3/README.md)**. Корневой MVP и его проверки сохранены отдельно. Для запуска новой сборки сначала перейдите `cd CardioPrognoz_V3`, затем следуйте её README.
+
+Issues: [CARD-13 #33](https://github.com/Dororo345/ml-cardio-project/issues/33), [CARD-14 #34](https://github.com/Dororo345/ml-cardio-project/issues/34), [CARD-17 #35](https://github.com/Dororo345/ml-cardio-project/issues/35), [CARD-19 #36](https://github.com/Dororo345/ml-cardio-project/issues/36), [CARD-20 #37](https://github.com/Dororo345/ml-cardio-project/issues/37).
+
+[Политики, источники и метрики нового сценария](docs/lz9-card13-20/README.md). История спринтов — явно обозначенная симуляция, независимое ревью и реальное двухнедельное наблюдение не заявлены. Создание Issues и публикация PR — фактические действия GitHub с текущими датами.
+
 # ml-cardio-project / КардиоПрогноз — локальный MVP
 
 Исследовательский Flask-сервис, который выдаёт оценку **вероятности класса наличия сердечного заболевания в разметке UCI Cleveland**. Это **не** медицинский диагноз и **не** прогноз риска инфаркта/события через несколько лет. Нельзя применять результаты для клинического решения.

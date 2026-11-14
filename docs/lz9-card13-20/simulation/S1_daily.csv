@@ -1,0 +1,6 @@
+﻿sprint,day,mean_wip,snapshot_wip,Backlog,Ready,In Progress,Waiting Review,Review,Testing,Done
+S1,1,1.5,2,0,1,1,1,0,0,0
+S1,2,2.0,2,0,1,0,0,1,1,0
+S1,3,2.0,1,0,0,1,0,0,0,2
+S1,4,1.0,1,0,0,0,0,0,1,2
+S1,5,0.25,0,0,0,0,0,0,0,3

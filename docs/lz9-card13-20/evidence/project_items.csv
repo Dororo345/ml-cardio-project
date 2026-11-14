@@ -1,0 +1,21 @@
+﻿number,title,status,url,source
+2,Сбор и разметка датасета электронных медицинских карт (ЭМК) и результатов ЭКГ.,Backlog,https://github.com/Dororo345/ml-cardio-project/issues/2,projects_public_snapshot
+1,Очистка датасета от пропусков и удаление аномальных значений (выбросов) по показателям артериального давления и ИМТ.,Backlog,https://github.com/Dororo345/ml-cardio-project/issues/1,projects_public_snapshot
+3,Разведочный анализ данных (EDA) и выявление корреляций между факторами риска.,Backlog,https://github.com/Dororo345/ml-cardio-project/issues/3,projects_public_snapshot
+4,Применение метода SMOTE для устранения дисбаланса классов (больные/здоровые пациенты) в обучающей выборке.,Backlog,https://github.com/Dororo345/ml-cardio-project/issues/4,projects_public_snapshot
+5,Обучение базовой модели Random Forest для первичной классификации риска ишемической болезни сердца.,Backlog,https://github.com/Dororo345/ml-cardio-project/issues/5,projects_public_snapshot
+6,Настройка гиперпараметров моделей градиентного бустинга (XGBoost/LightGBM) с помощью GridSearch.,Backlog,https://github.com/Dororo345/ml-cardio-project/issues/6,projects_public_snapshot
+7,Подключение библиотеки SHAP (Explainable AI) для глобальной интерпретации: выявление наиболее важных факторов риска.,Backlog,https://github.com/Dororo345/ml-cardio-project/issues/7,projects_public_snapshot
+8,Настройка LIME (Explainable AI) для локальной интерпретации: объяснение решения нейросети по конкретному пациенту.,Backlog,https://github.com/Dororo345/ml-cardio-project/issues/8,projects_public_snapshot
+9,Проектирование реляционной базы данных для хранения истории прогнозов и профилей пациентов (3 нормальная форма).,Backlog,https://github.com/Dororo345/ml-cardio-project/issues/9,projects_public_snapshot
+10,Разработка REST API на FastAPI для приема медицинских показателей и возврата прогноза от ML-модели.,Backlog,https://github.com/Dororo345/ml-cardio-project/issues/10,projects_public_snapshot
+11,Написание скрипта для генерации PDF-отчета с визуализацией SHAP-графика (понятного для кардиолога),Backlog,https://github.com/Dororo345/ml-cardio-project/issues/11,projects_public_snapshot
+12,Упаковка ML-модели и серверной части в Docker-контейнер для подготовки к развертыванию.,Backlog,https://github.com/Dororo345/ml-cardio-project/issues/12,projects_public_snapshot
+14,[ЛЗ9/S1] Контракт ошибок `/predict` соответствует документации,Done,https://github.com/Dororo345/ml-cardio-project/issues/14,projects_public_snapshot
+15,[ЛЗ9/S1] Понятные сообщения об ошибках отдельных полей формы,Done,https://github.com/Dororo345/ml-cardio-project/issues/15,projects_public_snapshot
+16,[ЛЗ9/S1] Автоматические тесты Flask MVP в GitHub Actions,Done,https://github.com/Dororo345/ml-cardio-project/issues/16,projects_public_snapshot
+17,[ЛЗ9/S1] Сквозные проверки корректного и ошибочного прогнозов,Done,https://github.com/Dororo345/ml-cardio-project/issues/17,projects_public_snapshot
+18,[ЛЗ9/S2] Сбой XAI не подменяет результат вымышленными факторами,Done,https://github.com/Dororo345/ml-cardio-project/issues/18,projects_public_snapshot
+19,[ЛЗ9/S2] Проверка очистки формы в браузере,Done,https://github.com/Dororo345/ml-cardio-project/issues/19,projects_public_snapshot
+20,[ЛЗ9/S2] Версия ML-модели указывается в контракте API,Done,https://github.com/Dororo345/ml-cardio-project/issues/20,projects_public_snapshot
+21,[ЛЗ9/S2] 50 синтетических сценариев сквозной приёмки,Done,https://github.com/Dororo345/ml-cardio-project/issues/21,projects_public_snapshot

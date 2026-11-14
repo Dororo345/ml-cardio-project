@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Управление аккаунтами — КардиоПрогноз</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header>
+    <h1>♥ КардиоПрогноз</h1>
+    <p>Управление тестовыми учётными записями</p>
+</header>
+<nav class="account-nav">
+    <a href="{{ url_for('home') }}">К прогнозу</a>
+    <span>Администратор: {{ current_user['username'] }}</span>
+    <form method="post" action="{{ url_for('logout') }}">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+        <button type="submit" class="small-button">Выйти</button>
+    </form>
+</nav>
+<main class="container">
+    {% for category, message in get_flashed_messages(with_categories=true) %}
+        <p class="notice {{ 'success-message' if category == 'success' else 'error-message' }}" role="status">{{ message }}</p>
+    {% endfor %}
+    <section class="card">
+        <h2>Создание учётной записи</h2>
+        <p class="description">Только администратор может добавлять пользователей. Данные доступа не связаны с пациентами.</p>
+        <form method="post" action="{{ url_for('admin_add_user') }}" class="form-grid">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+            <div class="field">
+                <label for="username">Логин</label>
+                <input id="username" name="username" type="text" pattern="[A-Za-z0-9_.-]{3,32}" minlength="3" maxlength="32" autocomplete="off" required>
+            </div>
+            <div class="field">
+                <label for="password">Пароль (от 10 символов)</label>
+                <input id="password" name="password" type="password" minlength="10" maxlength="128" autocomplete="new-password" required>
+            </div>
+            <div><button type="submit" class="primary">Создать пользователя</button></div>
+        </form>
+    </section>
+    <section class="card">
+        <h2>Учётные записи</h2>
+        <div class="table-scroll">
+            <table class="account-table">
+                <thead><tr><th>ID</th><th>Логин</th><th>Роль</th><th>Состояние</th><th>Действие</th></tr></thead>
+                <tbody>
+                {% for user in users %}
+                    <tr>
+                        <td>{{ user['id'] }}</td>
+                        <td>{{ user['username'] }}</td>
+                        <td>{{ 'Администратор' if user['role']=='admin' else 'Пользователь' }}</td>
+                        <td>{{ 'Активен' if user['active'] else 'Отключён' }}</td>
+                        <td>
+                            {% if user['role']=='user' and user['active'] %}
+                                <form method="post" action="{{ url_for('admin_disable_user',user_id=user['id']) }}">
+                                    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                                    <button type="submit" class="secondary">Отключить</button>
+                                </form>
+                            {% else %}—{% endif %}
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <p class="muted">Отключённый пользователь больше не может войти; текущие сеансы также перестают действовать.</p>
+    </section>
+</main>
+</body>
+</html>

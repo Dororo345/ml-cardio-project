@@ -1,0 +1,17 @@
+{
+  "observed_at_utc": "2026-11-14T13:29:17.332066+00:00",
+  "python": "3.12.14",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "packages": {
+    "Flask": "3.1.3",
+    "Werkzeug": "3.1.9",
+    "scikit-learn": "1.6.1",
+    "numpy": "2.1.3",
+    "pandas": "2.2.3",
+    "scipy": "1.15.3",
+    "joblib": "1.6.0",
+    "shap": "0.49.1",
+    "pytest": "9.2.0"
+  },
+  "github_head": "892014c4f5294a0633cb0476855c35b0feb6d9c3"
+}

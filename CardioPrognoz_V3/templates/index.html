@@ -1,0 +1,357 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>КардиоПрогноз — Версия 3 · Спринт 2</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<header>
+    <h1>♥ КардиоПрогноз</h1>
+    <p>Интеллектуальная система оценки сердечно-сосудистого состояния</p>
+</header>
+<nav class="account-nav" aria-label="Учётная запись">
+    <span>Версия 3 · Спринт 2 · учебный прототип</span>
+    <div class="links">
+        {% if current_user %}
+            <span>Пользователь: <strong>{{ current_user['username'] }}</strong></span>
+            <a href="{{ url_for('integration_page') }}">Тестовая интеграция / импорт CSV</a>
+            {% if current_user['role'] == 'admin' %}<a href="{{ url_for('admin') }}">Управление аккаунтами</a>{% endif %}
+            <form method="post" action="{{ url_for('logout') }}">
+                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                <button class="small-button" type="submit">Выйти</button>
+            </form>
+        {% else %}
+            <a href="{{ url_for('login') }}">Войти в систему</a>
+        {% endif %}
+    </div>
+</nav>
+
+<main class="container">
+
+<section class="card">
+    <h2>Ввод медицинских показателей</h2>
+
+    <p class="description">
+        Заполните все 13 параметров для получения
+        прогноза ML-модели. Некоторые показатели
+        требуют результатов медицинского обследования.
+    </p>
+
+    <form id="predictionForm">
+        <div class="form-grid">
+
+            <div class="field">
+                <label for="age">Возраст (лет)</label>
+                <input id="age" name="age" type="number"
+                       min="18" max="120" step="1" required>
+            </div>
+
+            <div class="field">
+                <label for="sex">Пол (код датасета)</label>
+                <select id="sex" name="sex" required>
+                    <option value="">Выберите</option>
+                    <option value="1">Мужской</option>
+                    <option value="0">Женский</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label for="cp">Тип боли в груди</label>
+                <select id="cp" name="cp" required>
+                    <option value="">Выберите</option>
+                    <option value="1">Типичная стенокардия</option>
+                    <option value="2">Атипичная стенокардия</option>
+                    <option value="3">Неангинозная боль</option>
+                    <option value="4">Бессимптомное состояние</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label for="trestbps">Давление в покое (мм рт. ст.)</label>
+                <input id="trestbps" name="trestbps" type="number"
+                       min="70" max="260" step="1" required>
+            </div>
+
+            <div class="field">
+                <label for="chol">Холестерин (мг/дл)</label>
+                <input id="chol" name="chol" type="number"
+                       min="80" max="650" step="1" required>
+            </div>
+
+            <div class="field">
+                <label for="fbs">Глюкоза натощак более 120 мг/дл</label>
+                <select id="fbs" name="fbs" required>
+                    <option value="">Выберите</option>
+                    <option value="1">Да</option>
+                    <option value="0">Нет</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label for="restecg">Результат ЭКГ в покое</label>
+                <select id="restecg" name="restecg" required>
+                    <option value="">Выберите</option>
+                    <option value="0">Норма</option>
+                    <option value="1">Изменения ST-T</option>
+                    <option value="2">Признаки гипертрофии ЛЖ</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label for="thalach">Максимальная ЧСС (уд/мин)</label>
+                <input id="thalach" name="thalach" type="number"
+                       min="40" max="250" step="1" required>
+            </div>
+
+            <div class="field">
+                <label for="exang">Стенокардия при нагрузке</label>
+                <select id="exang" name="exang" required>
+                    <option value="">Выберите</option>
+                    <option value="1">Да</option>
+                    <option value="0">Нет</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label for="oldpeak">Депрессия сегмента ST (oldpeak)</label>
+                <input id="oldpeak" name="oldpeak" type="number"
+                       min="0" max="7" step="0.1" required>
+            </div>
+
+            <div class="field">
+                <label for="slope">Наклон сегмента ST при нагрузке</label>
+                <select id="slope" name="slope" required>
+                    <option value="">Выберите</option>
+                    <option value="1">Восходящий</option>
+                    <option value="2">Горизонтальный</option>
+                    <option value="3">Нисходящий</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label for="ca">Число сосудов (флюороскопия)</label>
+                <select id="ca" name="ca" required>
+                    <option value="">Выберите</option>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label for="thal">Результат исследования thal</label>
+                <select id="thal" name="thal" required>
+                    <option value="">Выберите</option>
+                    <option value="3">Норма (3)</option>
+                    <option value="6">Фиксированный дефект (6)</option>
+                    <option value="7">Обратимый дефект (7)</option>
+                </select>
+            </div>
+
+        </div>
+
+        <div class="buttons">
+            <button class="primary" type="submit" id="submitBtn">
+                Рассчитать прогноз
+            </button>
+
+            <button class="secondary" type="reset">
+                Очистить форму
+            </button>
+
+            <button class="secondary" type="button" id="exampleBtn">
+                Заполнить тестовый пример
+            </button>
+        </div>
+    </form>
+
+    <p id="errorMessage" class="error" role="alert" hidden></p>
+
+    <section class="result" id="resultBlock" hidden>
+        <h2>Результат ML-модели</h2>
+
+        <p>Модельная вероятность положительного класса:</p>
+
+        <div class="probability" id="probabilityValue">
+            —
+        </div>
+
+        <div class="progress">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+
+        <p id="classification"></p>
+        <div id="anomalyWarnings" class="notice" hidden>
+            <strong>Проверьте введённые показатели</strong>
+            <ul id="anomalyWarningsList"></ul>
+            <small>Это учебные правила контроля ввода, а не диагноз или медицинская рекомендация. Значения не изменены.</small>
+        </div>
+
+                
+        <h3>Факторы, влияющие на прогноз</h3>
+
+        <ol id="xaiList"></ol>
+
+        <p class="description">
+            SHAP показывает вклад каждого показателя
+            относительно фоновой выборки.
+            Объяснения не являются доказательством
+            причин заболевания.
+        </p>
+
+        <div class="notice">
+            Результат предназначен только для
+            учебной демонстрации. Он не является
+            медицинским диагнозом и не оценивает
+            вероятность будущего инфаркта.
+        </div>
+    </section>
+</section>
+
+</main>
+
+<script>
+const form = document.getElementById("predictionForm");
+const resultBlock = document.getElementById("resultBlock");
+const errorMessage = document.getElementById("errorMessage");
+const submitBtn = document.getElementById("submitBtn");
+const probabilityValue = document.getElementById("probabilityValue");
+const progressFill = document.getElementById("progressFill");
+const classification = document.getElementById("classification");
+const anomalyWarnings = document.getElementById("anomalyWarnings");
+const anomalyWarningsList = document.getElementById("anomalyWarningsList");
+
+const features = [
+    "age", "sex", "cp", "trestbps", "chol",
+    "fbs", "restecg", "thalach", "exang",
+    "oldpeak", "slope", "ca", "thal"
+];
+
+form.addEventListener("submit", async function(event) {
+    event.preventDefault();
+
+    resultBlock.hidden = true;
+    errorMessage.hidden = true;
+    anomalyWarnings.hidden = true;
+
+    if (!form.reportValidity()) {
+        return;
+    }
+
+    const data = {};
+
+    for (const feature of features) {
+        data[feature] = Number(form.elements[feature].value);
+    }
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Выполняется расчёт...";
+
+    try {
+        const response = await fetch("/predict", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+        });
+
+        const result = await response.json();
+
+        if (!response.ok) {
+            throw new Error(result.error || "Ошибка расчёта");
+        }
+
+        const percent = Number(result.probability_percent);
+
+        if (!Number.isFinite(percent)) {
+            throw new Error("Некорректный ответ модели");
+        }
+
+        probabilityValue.textContent =
+            percent.toFixed(2).replace(".", ",") + "%";
+
+        progressFill.style.width = percent + "%";
+
+        classification.textContent =
+            result.predicted_class === 1
+            ? "Предсказание модели: класс 1 (наличие заболевания по разметке датасета)"
+            : "Предсказание модели: класс 0 (отсутствие заболевания по разметке датасета)";
+
+            
+        const xaiList = document.getElementById("xaiList");
+
+        xaiList.replaceChildren();
+
+        for (const factor of result.factors || []) {
+            const item = document.createElement("li");
+
+            item.textContent =
+                `${factor.name} — ${factor.direction} модельную оценку`;
+
+            xaiList.appendChild(item);
+        }
+
+
+        anomalyWarningsList.replaceChildren();
+        const warnings = Array.isArray(result.warnings) ? result.warnings : [];
+        for (const warning of warnings) {
+            const item = document.createElement("li");
+            item.textContent = warning.message;
+            anomalyWarningsList.appendChild(item);
+        }
+        anomalyWarnings.hidden = warnings.length === 0;
+        resultBlock.hidden = false;
+
+    } catch (error) {
+        errorMessage.textContent = error.message;
+        errorMessage.hidden = false;
+    } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Рассчитать прогноз";
+    }
+});
+
+form.addEventListener("reset", function() {
+    resultBlock.hidden = true;
+    errorMessage.hidden = true;
+    progressFill.style.width = "0%";
+    anomalyWarnings.hidden = true;
+});
+
+document.getElementById("exampleBtn").addEventListener("click", function() {
+    const example = {
+        age: 59,
+        sex: 1,
+        cp: 4,
+        trestbps: 138,
+        chol: 271,
+        fbs: 0,
+        restecg: 2,
+        thalach: 182,
+        exang: 0,
+        oldpeak: 0,
+        slope: 1,
+        ca: 0,
+        thal: 3
+    };
+
+    for (const [name, value] of Object.entries(example)) {
+        form.elements[name].value = String(value);
+    }
+
+    resultBlock.hidden = true;
+    errorMessage.hidden = true;
+    anomalyWarnings.hidden = true;
+});
+</script>
+
+</body>
+</html>

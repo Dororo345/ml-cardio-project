@@ -1,0 +1,4 @@
+﻿source,event,timestamp_as_recorded,tests,failures,errors,evidence
+local_junit,original_archive,2026-11-14T19:26:00.153489+06:00,90,5,0,baseline.xml
+local_junit,csrf_fixture_fixed,2026-11-14T19:26:48.525487+06:00,90,0,0,corrected.xml
+local_junit,expanded_synthetic_audit,2026-11-14T19:28:31.222896+06:00,115,0,0,expanded.xml

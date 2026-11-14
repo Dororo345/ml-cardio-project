@@ -1,0 +1,129 @@
+........................................................................ [ 80%]
+.............FFFFF                                                       [100%]
+=================================== FAILURES ===================================
+_________________________ test_mock_fetch_and_scoring __________________________
+
+client = <FlaskClient <Flask 'app'>>
+
+    def test_mock_fetch_and_scoring(client):
+        with patch("integration.fetch_mock_record", return_value=to_model_fields(RECORDS["SYN-001"])):
+>           res = client.post("/integration/mock", data={"record_id": "SYN-001", "csrf_token": csrf(client)})
+                                                                                               ^^^^^^^^^^^^
+
+tests/test_sprint2_v3.py:77: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+client = <FlaskClient <Flask 'app'>>
+
+    def csrf(client):
+        with client.session_transaction() as sess:
+>           return sess["csrf_token"]
+                   ^^^^^^^^^^^^^^^^^^
+E           KeyError: 'csrf_token'
+
+tests/test_sprint2_v3.py:32: KeyError
+__________________________ test_mock_offline_message ___________________________
+
+client = <FlaskClient <Flask 'app'>>
+
+    def test_mock_offline_message(client):
+        with patch("integration.fetch_mock_record", side_effect=IntegrationError("Локальный mock-сервис недоступен")):
+>           res = client.post("/integration/mock", data={"record_id": "SYN-001", "csrf_token": csrf(client)})
+                                                                                               ^^^^^^^^^^^^
+
+tests/test_sprint2_v3.py:86: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+client = <FlaskClient <Flask 'app'>>
+
+    def csrf(client):
+        with client.session_transaction() as sess:
+>           return sess["csrf_token"]
+                   ^^^^^^^^^^^^^^^^^^
+E           KeyError: 'csrf_token'
+
+tests/test_sprint2_v3.py:32: KeyError
+_________________________ test_upload_per_row_results __________________________
+
+client = <FlaskClient <Flask 'app'>>
+
+    def test_upload_per_row_results(client):
+        data = sample_csv([RECORDS["SYN-001"], {**RECORDS["SYN-002"], "age_years": "-1"}])
+        res = client.post("/integration/import", data={
+>           "csrf_token": csrf(client), "file": (io.BytesIO(data), "synthetic.csv")
+                          ^^^^^^^^^^^^
+        }, content_type="multipart/form-data")
+
+tests/test_sprint2_v3.py:94: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+client = <FlaskClient <Flask 'app'>>
+
+    def csrf(client):
+        with client.session_transaction() as sess:
+>           return sess["csrf_token"]
+                   ^^^^^^^^^^^^^^^^^^
+E           KeyError: 'csrf_token'
+
+tests/test_sprint2_v3.py:32: KeyError
+_____________________ test_upload_unknown_columns_rejected _____________________
+
+client = <FlaskClient <Flask 'app'>>
+
+    def test_upload_unknown_columns_rejected(client):
+        data = sample_csv([RECORDS["SYN-001"]]).replace(b"age_years,", b"patient_name,", 1)
+        res = client.post("/integration/import", data={
+>           "csrf_token": csrf(client), "file": (io.BytesIO(data), "not_allowed.csv")
+                          ^^^^^^^^^^^^
+        }, content_type="multipart/form-data")
+
+tests/test_sprint2_v3.py:105: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+client = <FlaskClient <Flask 'app'>>
+
+    def csrf(client):
+        with client.session_transaction() as sess:
+>           return sess["csrf_token"]
+                   ^^^^^^^^^^^^^^^^^^
+E           KeyError: 'csrf_token'
+
+tests/test_sprint2_v3.py:32: KeyError
+_________________________ test_csrf_and_login_required _________________________
+
+client = <FlaskClient <Flask 'app'>>
+
+    def test_csrf_and_login_required(client):
+        assert client.post("/integration/import").status_code == 400
+        assert client.get("/integration/sample.csv").status_code == 200
+>       client.post("/logout", data={"csrf_token": csrf(client)})
+                                                   ^^^^^^^^^^^^
+
+tests/test_sprint2_v3.py:114: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+client = <FlaskClient <Flask 'app'>>
+
+    def csrf(client):
+        with client.session_transaction() as sess:
+>           return sess["csrf_token"]
+                   ^^^^^^^^^^^^^^^^^^
+E           KeyError: 'csrf_token'
+
+tests/test_sprint2_v3.py:32: KeyError
+=============================== warnings summary ===============================
+../../../../../../opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/anyio/pytest_plugin.py:14
+  /opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/anyio/pytest_plugin.py:14: PytestRemovedIn10Warning: _pytest.python.CallSpec2 has been renamed to CallSpec.
+  The CallSpec2 alias will be removed in pytest 10.
+  Update imports to use CallSpec instead.
+  See https://docs.pytest.org/en/stable/deprecations.html#callspec2-renamed
+    from _pytest.python import CallSpec2
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_sprint2_v3.py::test_mock_fetch_and_scoring - KeyError: 'csr...
+FAILED tests/test_sprint2_v3.py::test_mock_offline_message - KeyError: 'csrf_...
+FAILED tests/test_sprint2_v3.py::test_upload_per_row_results - KeyError: 'csr...
+FAILED tests/test_sprint2_v3.py::test_upload_unknown_columns_rejected - KeyEr...
+FAILED tests/test_sprint2_v3.py::test_csrf_and_login_required - KeyError: 'cs...
+5 failed, 85 passed, 1 warning in 6.96s

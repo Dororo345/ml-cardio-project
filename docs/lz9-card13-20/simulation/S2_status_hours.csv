@@ -1,0 +1,8 @@
+﻿status,task_hours,mean_per_task
+Backlog,1.0,0.5
+Ready,18.0,9.0
+In Progress,19.0,9.5
+Waiting Review,2.0,1.0
+Review,4.0,2.0
+Testing,10.0,5.0
+Done,26.0,13.0

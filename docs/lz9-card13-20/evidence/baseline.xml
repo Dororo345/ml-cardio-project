@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="5" skipped="0" tests="90" time="6.956" timestamp="2026-11-14T19:26:00.153489+06:00" hostname="ab3387afb1e4"><testcase classname="tests.test_mvp" name="test_50_synthetic_cases[0]" time="0.015" /><testcase classname="tests.test_mvp" name="test_50_synthetic_cases[1]" time="0.009" /><testcase classname="tests.test_mvp" name="test_50_synthetic_cases[2]" time="0.009" /><testcase classname="tests.test_mvp" name="test_50_synthetic_cases[3]" time="0.009" /><testcase classname="tests.test_mvp" name="test_50_synthetic_cases[4]" time="0.008" /><testcase classname="tests.test_mvp" name="test_50_synthetic_cases[5]" time="0.007" /><testcase classname="tests.test_mvp" name="test_50_synthetic_cases[6]" time="0.008" /><testcase classname="tests.test_mvp" name="test_50_synthetic_cases[7]" time="0.007" /><testcase classname="tests.test_mvp" name="test_50_synthetic_cases[8]" time="0.007" /><testcase classname="tests.test_mvp" name="test_50_synthetic_cases[9]" time="0.008" /><testcase classname="tests.test_mvp" name="test_50_synthetic_cases[10]" time="0.009" /><testcase classname="tests.test_mvp" name="test_50_synthetic_cases[11]" time="0.008" /><testcase classname="tests.test_mvp" name="test_50_synthetic_cases[12]" time="0.007" /><testcase classname="tests.test_mvp" name="test_50_synthetic_cases[13]" time="0.009" /><testcase classname="tests.test_mvp" name="test_50_synthetic_cases[14]" time="0.009" /><testcase classname="tests.test_mvp" name="test_50_synthetic_cases[15]" time="0.009" /><testcase classname="tests.test_mvp" name="test_50_synthetic_cases[16]" time="0.008" /><testcase classname="tests.test_mvp" name="test_50_synthetic_cases[17]" time="0.007" /><testcase classname="tests.test_mvp" name="test_50_synthetic_cases[18]" time="0.008" /><testcase classname="tests.test_mvp" name="test_50_synthetic_cases[19]" time="0.008" /><testcase classname="tests.test_mvp" name="test_50_synthetic_cases[20]" time="0.008" /><testcase classname="tests.test_mvp" name="test_50_synthetic_cases[21]" time="0.008" /><testcase classname="tests.test_mvp" name="test_50_synthetic_cases[22]" time="0.008" /><testcase classname="tests.test_mvp" name="test_50_synthetic_cases[23]" time="0.008" /><testcase classname="tests.test_mvp" name="test_50_synthetic_cases[24]" time="0.007" /><testcase classname="tests.test_mvp" name="test_50_synthetic_cases[25]" time="0.008" /><testcase classname="tests.test_mvp" name="test_50_synthetic_cases[26]" time="0.008" /><testcase classname="tests.test_mvp" name="test_50_synthetic_cases[27]" time="0.008" /><testcase classname="tests.test_mvp" name="test_50_synthetic_cases[28]" time="0.008" /><testcase classname="tests.test_mvp" name="test_50_synthetic_cases[29]" time="0.007" /><testcase classname="tests.test_mvp" name="test_50_synthetic_cases[30]" time="0.008" /><testcase classname="tests.test_mvp" name="test_50_synthetic_cases[31]" time="0.007" /><testcase classname="tests.test_mvp" name="test_50_synthetic_cases[32]" time="0.007" /><testcase classname="tests.test_mvp" name="test_50_synthetic_cases[33]" time="0.007" /><testcase classname="tests.test_mvp" name="test_50_synthetic_cases[34]" time="0.008" /><testcase classname="tests.test_mvp" name="test_50_synthetic_cases[35]" time="0.007" /><testcase classname="tests.test_mvp" name="test_50_synthetic_cases[36]" time="0.008" /><testcase classname="tests.test_mvp" name="test_50_synthetic_cases[37]" time="0.007" /><testcase classname="tests.test_mvp" name="test_50_synthetic_cases[38]" time="0.008" /><testcase classname="tests.test_mvp" name="test_50_synthetic_cases[39]" time="0.008" /><testcase classname="tests.test_mvp" name="test_50_synthetic_cases[40]" time="0.008" /><testcase classname="tests.test_mvp" name="test_50_synthetic_cases[41]" time="0.008" /><testcase classname="tests.test_mvp" name="test_50_synthetic_cases[42]" time="0.008" /><testcase classname="tests.test_mvp" name="test_50_synthetic_cases[43]" time="0.008" /><testcase classname="tests.test_mvp" name="test_50_synthetic_cases[44]" time="0.007" /><testcase classname="tests.test_mvp" name="test_50_synthetic_cases[45]" time="0.008" /><testcase classname="tests.test_mvp" name="test_50_synthetic_cases[46]" time="0.007" /><testcase classname="tests.test_mvp" name="test_50_synthetic_cases[47]" time="0.007" /><testcase classname="tests.test_mvp" name="test_50_synthetic_cases[48]" time="0.007" /><testcase classname="tests.test_mvp" name="test_50_synthetic_cases[49]" time="0.007" /><testcase classname="tests.test_mvp" name="test_known_colab_prediction" time="0.007" /><testcase classname="tests.test_mvp" name="test_missing_required_field[age]" time="0.002" /><testcase classname="tests.test_mvp" name="test_missing_required_field[sex]" time="0.002" /><testcase classname="tests.test_mvp" name="test_missing_required_field[cp]" time="0.002" /><testcase classname="tests.test_mvp" name="test_missing_required_field[trestbps]" time="0.002" /><testcase classname="tests.test_mvp" name="test_missing_required_field[chol]" time="0.002" /><testcase classname="tests.test_mvp" name="test_missing_required_field[fbs]" time="0.002" /><testcase classname="tests.test_mvp" name="test_missing_required_field[restecg]" time="0.002" /><testcase classname="tests.test_mvp" name="test_missing_required_field[thalach]" time="0.002" /><testcase classname="tests.test_mvp" name="test_missing_required_field[exang]" time="0.002" /><testcase classname="tests.test_mvp" name="test_missing_required_field[oldpeak]" time="0.002" /><testcase classname="tests.test_mvp" name="test_missing_required_field[slope]" time="0.002" /><testcase classname="tests.test_mvp" name="test_missing_required_field[ca]" time="0.001" /><testcase classname="tests.test_mvp" name="test_missing_required_field[thal]" time="0.002" /><testcase classname="tests.test_mvp" name="test_invalid_values[age--5]" time="0.002" /><testcase classname="tests.test_mvp" name="test_invalid_values[age-150]" time="0.002" /><testcase classname="tests.test_mvp" name="test_invalid_values[chol--20]" time="0.002" /><testcase classname="tests.test_mvp" name="test_invalid_values[cp-9]" time="0.002" /><testcase classname="tests.test_mvp" name="test_invalid_values[thal-99]" time="0.002" /><testcase classname="tests.test_mvp" name="test_invalid_values[trestbps-abc]" time="0.002" /><testcase classname="tests.test_mvp" name="test_invalid_values[age-None]" time="0.002" /><testcase classname="tests.test_sprint1" name="test_login_and_logout" time="0.244" /><testcase classname="tests.test_sprint1" name="test_wrong_login_does_not_reveal_account_presence" time="0.236" /><testcase classname="tests.test_sprint1" name="test_admin_page_is_restricted" time="0.235" /><testcase classname="tests.test_sprint1" name="test_admin_creates_and_disables_user" time="0.323" /><testcase classname="tests.test_sprint1" name="test_csrf_is_required" time="0.239" /><testcase classname="tests.test_sprint1" name="test_usernames_are_unique_case_insensitively" time="0.313" /><testcase classname="tests.test_sprint1" name="test_warning_does_not_modify_valid_input" time="0.245" /><testcase classname="tests.test_sprint1" name="test_validation_non_diagnostic" time="0.000" /><testcase classname="tests.test_sprint1" name="test_unauthenticated_users_cannot_open_form_or_predict" time="0.158" /><testcase classname="tests.test_sprint1" name="test_login_then_form_and_logout" time="0.241" /><testcase classname="tests.test_sprint2_v3" name="test_external_mapping_matches_existing_model_features" time="0.000" /><testcase classname="tests.test_sprint2_v3" name="test_unknown_external_fields_are_rejected" time="0.000" /><testcase classname="tests.test_sprint2_v3" name="test_csv_handles_good_bad_and_trailing_rows" time="0.000" /><testcase classname="tests.test_sprint2_v3" name="test_csv_rejects_more_than_50_rows" time="0.001" /><testcase classname="tests.test_sprint2_v3" name="test_mock_fetch_and_scoring" time="0.158"><failure message="KeyError: 'csrf_token'">client = &lt;FlaskClient &lt;Flask 'app'&gt;&gt;
+
+    def test_mock_fetch_and_scoring(client):
+        with patch("integration.fetch_mock_record", return_value=to_model_fields(RECORDS["SYN-001"])):
+&gt;           res = client.post("/integration/mock", data={"record_id": "SYN-001", "csrf_token": csrf(client)})
+                                                                                               ^^^^^^^^^^^^
+
+tests/test_sprint2_v3.py:77: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+client = &lt;FlaskClient &lt;Flask 'app'&gt;&gt;
+
+    def csrf(client):
+        with client.session_transaction() as sess:
+&gt;           return sess["csrf_token"]
+                   ^^^^^^^^^^^^^^^^^^
+E           KeyError: 'csrf_token'
+
+tests/test_sprint2_v3.py:32: KeyError</failure></testcase><testcase classname="tests.test_sprint2_v3" name="test_mock_offline_message" time="0.161"><failure message="KeyError: 'csrf_token'">client = &lt;FlaskClient &lt;Flask 'app'&gt;&gt;
+
+    def test_mock_offline_message(client):
+        with patch("integration.fetch_mock_record", side_effect=IntegrationError("Локальный mock-сервис недоступен")):
+&gt;           res = client.post("/integration/mock", data={"record_id": "SYN-001", "csrf_token": csrf(client)})
+                                                                                               ^^^^^^^^^^^^
+
+tests/test_sprint2_v3.py:86: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+client = &lt;FlaskClient &lt;Flask 'app'&gt;&gt;
+
+    def csrf(client):
+        with client.session_transaction() as sess:
+&gt;           return sess["csrf_token"]
+                   ^^^^^^^^^^^^^^^^^^
+E           KeyError: 'csrf_token'
+
+tests/test_sprint2_v3.py:32: KeyError</failure></testcase><testcase classname="tests.test_sprint2_v3" name="test_upload_per_row_results" time="0.163"><failure message="KeyError: 'csrf_token'">client = &lt;FlaskClient &lt;Flask 'app'&gt;&gt;
+
+    def test_upload_per_row_results(client):
+        data = sample_csv([RECORDS["SYN-001"], {**RECORDS["SYN-002"], "age_years": "-1"}])
+        res = client.post("/integration/import", data={
+&gt;           "csrf_token": csrf(client), "file": (io.BytesIO(data), "synthetic.csv")
+                          ^^^^^^^^^^^^
+        }, content_type="multipart/form-data")
+
+tests/test_sprint2_v3.py:94: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+client = &lt;FlaskClient &lt;Flask 'app'&gt;&gt;
+
+    def csrf(client):
+        with client.session_transaction() as sess:
+&gt;           return sess["csrf_token"]
+                   ^^^^^^^^^^^^^^^^^^
+E           KeyError: 'csrf_token'
+
+tests/test_sprint2_v3.py:32: KeyError</failure></testcase><testcase classname="tests.test_sprint2_v3" name="test_upload_unknown_columns_rejected" time="0.161"><failure message="KeyError: 'csrf_token'">client = &lt;FlaskClient &lt;Flask 'app'&gt;&gt;
+
+    def test_upload_unknown_columns_rejected(client):
+        data = sample_csv([RECORDS["SYN-001"]]).replace(b"age_years,", b"patient_name,", 1)
+        res = client.post("/integration/import", data={
+&gt;           "csrf_token": csrf(client), "file": (io.BytesIO(data), "not_allowed.csv")
+                          ^^^^^^^^^^^^
+        }, content_type="multipart/form-data")
+
+tests/test_sprint2_v3.py:105: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+client = &lt;FlaskClient &lt;Flask 'app'&gt;&gt;
+
+    def csrf(client):
+        with client.session_transaction() as sess:
+&gt;           return sess["csrf_token"]
+                   ^^^^^^^^^^^^^^^^^^
+E           KeyError: 'csrf_token'
+
+tests/test_sprint2_v3.py:32: KeyError</failure></testcase><testcase classname="tests.test_sprint2_v3" name="test_csrf_and_login_required" time="0.163"><failure message="KeyError: 'csrf_token'">client = &lt;FlaskClient &lt;Flask 'app'&gt;&gt;
+
+    def test_csrf_and_login_required(client):
+        assert client.post("/integration/import").status_code == 400
+        assert client.get("/integration/sample.csv").status_code == 200
+&gt;       client.post("/logout", data={"csrf_token": csrf(client)})
+                                                   ^^^^^^^^^^^^
+
+tests/test_sprint2_v3.py:114: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+client = &lt;FlaskClient &lt;Flask 'app'&gt;&gt;
+
+    def csrf(client):
+        with client.session_transaction() as sess:
+&gt;           return sess["csrf_token"]
+                   ^^^^^^^^^^^^^^^^^^
+E           KeyError: 'csrf_token'
+
+tests/test_sprint2_v3.py:32: KeyError</failure></testcase></testsuite></testsuites>

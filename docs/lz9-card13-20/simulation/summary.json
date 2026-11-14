@@ -1,0 +1,42 @@
+[
+  {
+    "sprint": "S1",
+    "tasks": 3,
+    "days": 5,
+    "throughput_day": 0.6,
+    "mean_cycle": 18.0,
+    "p85_linear": 20.4,
+    "p85_nearest": 21,
+    "mean_wip": 1.35,
+    "max_wip": 2,
+    "hours_wip_gt1": 21.0,
+    "mean_lead": 25.5,
+    "area_Backlog": 1.5,
+    "area_Ready": 22.5,
+    "area_In Progress": 21.0,
+    "area_Waiting Review": 14.0,
+    "area_Review": 5.0,
+    "area_Testing": 14.0,
+    "area_Done": 42.0
+  },
+  {
+    "sprint": "S2",
+    "tasks": 2,
+    "days": 5,
+    "throughput_day": 0.4,
+    "mean_cycle": 17.5,
+    "p85_linear": 18.55,
+    "p85_nearest": 19,
+    "mean_wip": 0.875,
+    "max_wip": 1,
+    "hours_wip_gt1": 0.0,
+    "mean_lead": 26.5,
+    "area_Backlog": 1.0,
+    "area_Ready": 18.0,
+    "area_In Progress": 19.0,
+    "area_Waiting Review": 2.0,
+    "area_Review": 4.0,
+    "area_Testing": 10.0,
+    "area_Done": 26.0
+  }
+]
