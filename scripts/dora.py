@@ -11,7 +11,6 @@ import argparse
 import csv
 import json
 import os
-from collections import Counter
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from statistics import median
@@ -76,7 +75,11 @@ def load_incidents(path, start, end):
                     "restored_at_utc": b.isoformat() if b else None,
                     "restore_hours": duration_hours(a, b) if b and b >= a else None,
                     "repair_hours": float(row.get("repair_hours") or 0),
-                    "failed_deployment_id": row.get("failed_deployment_id", ""),
+                    # Existing files can still use the legacy failed_deployment_id header.
+                    "linked_deployment_id": str(
+                        row.get("linked_deployment_id") or row.get("failed_deployment_id") or ""
+                    ).strip(),
+                    "remediation_action": (row.get("remediation_action") or "").strip().lower(),
                 })
     return result
 
@@ -121,7 +124,43 @@ def collect(repo, environment, days, token, incident_file, end):
     incidents = load_incidents(incident_file, cutoff, end)
     restored = [i["restore_hours"] for i in incidents if i["restore_hours"] is not None]
     freq = round(len(successes) / (days / 7), 3) if records else None
-    cfr = round(100 * len(failures) / (len(successes) + len(failures)), 2) if successes or failures else None
+
+    # Count a changed deployment at most ONCE. A GitHub failed deployment is
+    # a failure; so is a successful deployment with a documented fix/rollback
+    # within 24 hours of that same deployment. An incident without a precise
+    # deployment ID and remediation action cannot be attributed reliably.
+    completed = {str(r["id"]): r for r in successes + failures}
+    failed_change_ids = {str(r["id"]) for r in failures}
+    corrected_success_ids = set()
+    unattributed_incidents = 0
+    for incident in incidents:
+        deployment_id = incident["linked_deployment_id"]
+        action = incident["remediation_action"]
+        if action not in {"fix", "rollback"}:
+            if incident["id"]:
+                unattributed_incidents += 1
+            continue
+        deployment = completed.get(deployment_id)
+        if deployment is None:
+            unattributed_incidents += 1
+            continue
+        # Github already records a failure; do not double count an incident.
+        if deployment["state"] != "success":
+            continue
+        incident_time = timestamp(incident["started_at_utc"])
+        delivered_time = timestamp(deployment["finished_at"])
+        if delivered_time is None or incident_time is None:
+            unattributed_incidents += 1
+            continue
+        interval = incident_time - delivered_time
+        if timedelta(0) <= interval <= timedelta(hours=24):
+            failed_change_ids.add(deployment_id)
+            corrected_success_ids.add(deployment_id)
+        else:
+            unattributed_incidents += 1
+
+    cfr_denominator = len(completed)
+    cfr = round(100 * len(failed_change_ids) / cfr_denominator, 2) if cfr_denominator else None
     # MTTR not reported as 0 when no incident exists.
     return {
         "source": "GitHub deployments and deployment statuses API; local incident register",
@@ -134,6 +173,10 @@ def collect(repo, environment, days, token, incident_file, end):
         "deployment_records": len(records),
         "successful_deployments": len(successes),
         "failed_deployments": len(failures),
+        "failed_changes_including_incidents": len(failed_change_ids),
+        "successful_deployments_with_fix_or_rollback": len(corrected_success_ids),
+        "change_failure_denominator": cfr_denominator,
+        "incidents_not_attributed_to_change_failure": unattributed_incidents,
         "unknown_deployments": len(records) - len(successes) - len(failures),
         "recorded_incidents": len(incidents),
         "recovered_incidents": len(restored),
@@ -143,7 +186,9 @@ def collect(repo, environment, days, token, incident_file, end):
         "notes": [
             "Environment is ephemeral CI staging (container smoke test), NOT public production.",
             "Passing workflow runs are not treated as deployments.",
-            "Failure rate is based on GitHub deployment failures/errors; post-release defects require an incident register.",
+            "Failure rate combines GitHub failure/error and linked fix/rollback incidents within 24h (unique deployment IDs).",
+            "Incidents without a documented action, matching deployment ID or 24h time window are excluded and counted separately.",
+            "The incident register must be kept complete for meaningful CFR; missing incident reports can understate CFR.",
             "Time to restore remains N/A without an observed resolved incident.",
             "Null means unavailable or no relevant observations, not zero.",
             "Small sample sizes are not representative.",

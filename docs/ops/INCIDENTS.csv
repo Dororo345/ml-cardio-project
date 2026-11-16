@@ -1,1 +1,1 @@
-incident_id,started_at_utc,restored_at_utc,failed_deployment_id,repair_hours,description
+incident_id,started_at_utc,restored_at_utc,linked_deployment_id,remediation_action,repair_hours,description
