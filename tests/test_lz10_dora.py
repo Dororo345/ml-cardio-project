@@ -9,7 +9,7 @@ spec = importlib.util.spec_from_file_location("lz10_dora", ROOT / "scripts" / "d
 dora = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(dora)
 
-NOW = datetime(2026, 11, 16, 12, 0, tzinfo=timezone.utc)
+NOW = datetime(2026, 11, 17, 12, 0, tzinfo=timezone.utc)
 DEPLOYED = datetime(2026, 11, 15, 12, 0, tzinfo=timezone.utc)
 COMMIT_TIME = datetime(2026, 11, 15, 11, 50, tzinfo=timezone.utc)
 
