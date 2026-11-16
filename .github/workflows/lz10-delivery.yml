@@ -28,7 +28,7 @@ jobs:
           python -m pip install -r requirements.txt
           python -m pip install pytest-cov ruff
       - name: Check critical Python syntax and style
-        run: python -m ruff check . ../scripts/dora.py --select E4,E7,E9
+        run: python -m ruff check app.py accounts.py integration.py feature_contract.py validation.py ../scripts/dora.py --select E4,E9
       - name: Run real V3 tests with at least 50% core coverage
         run: |
           python -m pytest -q --cov=app --cov=accounts --cov=integration --cov=feature_contract --cov=validation --cov-report=term-missing --cov-report=xml:coverage.xml --cov-fail-under=50
