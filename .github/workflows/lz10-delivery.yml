@@ -1,0 +1,112 @@
+name: LZ10 - Quality, staging smoke and DORA
+
+on:
+  pull_request:
+  push:
+    branches: [main, 'lz10/**']
+
+permissions:
+  contents: read
+
+jobs:
+  quality:
+    name: LZ10 quality and coverage
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    defaults:
+      run:
+        working-directory: CardioPrognoz_V3
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+          cache-dependency-path: CardioPrognoz_V3/requirements.txt
+      - name: Install application and quality tools
+        run: |
+          python -m pip install -r requirements.txt
+          python -m pip install pytest-cov ruff
+      - name: Check critical Python syntax and style
+        run: python -m ruff check app.py accounts.py integration.py feature_contract.py validation.py ../scripts/dora.py --select E4,E9
+      - name: Run real V3 tests with at least 50% core coverage
+        run: |
+          python -m pytest -q --cov=app --cov=accounts --cov=integration --cov=feature_contract --cov=validation --cov-report=term-missing --cov-report=xml:coverage.xml --cov-fail-under=50
+      - name: Save coverage report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lz10-v3-coverage
+          path: CardioPrognoz_V3/coverage.xml
+          if-no-files-found: warn
+
+  secrets:
+    name: Scan Git history for secrets
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  container-smoke:
+    name: Build and smoke-test ephemeral staging
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    needs: [quality, secrets]
+    permissions:
+      contents: read
+      deployments: write
+    environment:
+      name: ${{ github.ref == 'refs/heads/main' && 'lz10-ci-staging' || 'lz10-pr-validation' }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build the V3 container
+        run: docker build -t cardioprognoz-v3:lz10 CardioPrognoz_V3
+      - name: Boot a temporary staging instance
+        run: |
+          docker run -d --rm --name cardioprognoz-smoke -p 127.0.0.1:8765:8000 cardioprognoz-v3:lz10
+          for i in $(seq 1 40); do
+            if curl --silent --fail http://127.0.0.1:8765/login -o /tmp/cardio-login.html; then
+              grep -qi '<html' /tmp/cardio-login.html
+              echo "Ephemeral staging: login responds with HTTP 200"
+              exit 0
+            fi
+            sleep 2
+          done
+          docker logs cardioprognoz-smoke
+          exit 1
+      - name: Stop staging instance
+        if: always()
+        run: docker rm -f cardioprognoz-smoke || true
+
+  dora:
+    name: Calculate real DORA data
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    needs: [container-smoke]
+    permissions:
+      contents: read
+      deployments: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install charting dependency
+        run: python -m pip install matplotlib
+      - name: Build DORA dashboard from GitHub API
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python scripts/dora.py --repo "${{ github.repository }}" --days 30 --environment lz10-ci-staging --output-dir lz10-results
+      - name: Archive DORA evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: lz10-dora-dashboard
+          path: lz10-results/
+          if-no-files-found: error
