@@ -17,8 +17,12 @@ let authenticated = false;
 export const options = {
   vus: 5,
   duration: '45s',
+  // By default k6 clears a VU's cookies after each iteration. We log in
+  // once per VU, so the session cookie must persist for subsequent calls.
+  noCookiesReset: true,
   thresholds: {
     prediction_duration: ['p(95)<1500'],
+    http_req_failed: ['rate<0.01'],
     checks: ['rate>0.99'],
   },
 };
