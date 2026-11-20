@@ -1,0 +1,63 @@
+name: LZ11 synthetic load testing
+
+on:
+  pull_request:
+    paths:
+      - 'tests/load/**'
+      - 'CardioPrognoz_V3/**'
+      - '.github/workflows/lz11-load.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  k6-local-staging:
+    name: k6 against ephemeral V3
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build isolated staging image
+        run: docker build -t cardio-lz11:qa CardioPrognoz_V3
+      - name: Start disposable server
+        run: |
+          docker run -d --rm --name cardio-lz11 --network host cardio-lz11:qa
+          for i in $(seq 1 50); do
+            if curl --silent --fail http://127.0.0.1:8000/login -o /dev/null; then exit 0; fi
+            sleep 2
+          done
+          docker logs cardio-lz11
+          exit 1
+      - name: Create synthetic account for authenticated performance checks
+        run: |
+          docker exec -e LZ11_QA_USERNAME=synthetic_qa -e LZ11_QA_PASSWORD=SyntheticOnlyLz11Password123 cardio-lz11 \
+            python -m scripts.create_qa_account
+      - name: Check login and CSRF with real HTTP
+        run: |
+          docker exec -e LZ11_QA_USERNAME=synthetic_qa -e LZ11_QA_PASSWORD=SyntheticOnlyLz11Password123 cardio-lz11 \
+            python -m scripts.qa_auth_smoke
+      - name: Run k6 login load (30 VUs)
+        run: |
+          set -o pipefail
+          mkdir -p lz11-results
+          docker run --rm --network host -e BASE_URL=http://127.0.0.1:8000 \
+            -v "${{ github.workspace }}:/repo:ro" grafana/k6:0.53.0 \
+            run /repo/tests/load/login.js | tee lz11-results/login.log
+      - name: Run k6 authenticated prediction load (5 VUs)
+        run: |
+          set -o pipefail
+          docker run --rm --network host -e BASE_URL=http://127.0.0.1:8000 \
+            -e K6_USER=synthetic_qa -e K6_PASSWORD=SyntheticOnlyLz11Password123 \
+            -v "${{ github.workspace }}:/repo:ro" grafana/k6:0.53.0 \
+            run /repo/tests/load/predict.js | tee lz11-results/predict.log
+      - name: Keep load test evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lz11-k6-results
+          path: lz11-results/
+          if-no-files-found: warn
+      - name: Stop disposable test server
+        if: always()
+        run: docker stop cardio-lz11 || true
