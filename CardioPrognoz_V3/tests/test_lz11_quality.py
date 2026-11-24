@@ -97,3 +97,17 @@ def test_logout_revokes_access_to_prediction(browser_client):
     browser_client.get("/")
     assert browser_client.post("/logout", data={"csrf_token": csrf_token(browser_client)}).status_code == 302
     assert browser_client.post("/predict", json={"age": 59}).status_code == 401
+
+
+def test_mock_page_displays_all_13_synthetic_measurements(browser_client):
+    assert login(browser_client).status_code == 302
+    browser_client.get("/integration")
+    with patch("integration.fetch_mock_record", return_value=to_model_fields(RECORDS["SYN-001"])):
+        response = browser_client.post("/integration/mock", data={
+            "record_id": "SYN-001", "csrf_token": csrf_token(browser_client),
+        })
+    assert response.status_code == 200
+    page = response.get_data(as_text=True)
+    assert 'id="synthetic-parameters"' in page
+    assert page.count("<tr><td>") == 13
+    assert "Модельная вероятность класса 1" in page

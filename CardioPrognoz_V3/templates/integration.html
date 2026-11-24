@@ -30,6 +30,21 @@
     {% if mode == 'mock' and fetched %}
     <div class="result"><h3>Тестовая запись {{ fetched.record_id }}</h3>
         <p>Все 13 полей успешно сопоставлены со схемой ML-модели.</p>
+        <p class="muted">Ниже приведены только вымышленные показатели. Числовые коды соответствуют учебному датасету.</p>
+        {% set field_labels = {
+            'age': 'Возраст (лет)', 'sex': 'Пол (код)', 'cp': 'Тип боли в груди (код)',
+            'trestbps': 'Давление в покое', 'chol': 'Холестерин',
+            'fbs': 'Глюкоза натощак (флаг)', 'restecg': 'ЭКГ в покое (код)',
+            'thalach': 'Максимальная ЧСС', 'exang': 'Стенокардия при нагрузке (флаг)',
+            'oldpeak': 'Депрессия сегмента ST', 'slope': 'Наклон ST (код)',
+            'ca': 'Число сосудов', 'thal': 'Результат thal (код)'
+        } %}
+        <div class="table-scroll"><table class="account-table" id="synthetic-parameters">
+            <thead><tr><th>Учебный показатель</th><th>Значение</th></tr></thead>
+            <tbody>{% for field, value in fetched.data.items() %}
+                <tr><td>{{ field_labels[field] }}</td><td>{{ value }}</td></tr>
+            {% endfor %}</tbody>
+        </table></div>
         <p>Модельная вероятность класса 1: <strong>{{ '%.2f'|format(fetched.score.percent) }}%</strong></p>
         <p>Предсказанный класс: {{ fetched.score.predicted_class }}</p>
         {% if fetched.score.warnings %}<p>Есть {{ fetched.score.warnings|length }} учебных предупреждений о сочетаниях показателей.</p>{% endif %}
