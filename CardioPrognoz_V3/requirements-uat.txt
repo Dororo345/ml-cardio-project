@@ -1,0 +1,4 @@
+# Install on top of (or together with) the V3 application requirements.
+-r requirements.txt
+httpx>=0.28,<0.29
+lxml>=5,<7

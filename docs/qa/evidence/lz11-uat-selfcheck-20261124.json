@@ -1,0 +1,103 @@
+{
+  "title": "ЛЗ 11: самостоятельный технический прогон 13 UAT-маршрутов",
+  "started_at_utc": "2026-11-24T10:54:29+00:00",
+  "finished_at_utc": "2026-11-24T10:54:31+00:00",
+  "tester": "ChatGPT / developer-operated technical self-check",
+  "method": "Live local HTTP (Werkzeug + httpx + 127.0.0.1:5001 mock), isolated temporary SQLite, synthetic CSV; no GUI browser",
+  "independent_user_acceptance": false,
+  "results": [
+    {
+      "id": "UAT-01",
+      "name": "Успешный вход",
+      "result": "Пройдено технически",
+      "evidence": "Вход HTTP 302; форма прогнозирования HTTP 200",
+      "limitation": null
+    },
+    {
+      "id": "UAT-02",
+      "name": "Неверный пароль",
+      "result": "Пройдено технически",
+      "evidence": "Неверный пароль: сообщение есть, доступа нет",
+      "limitation": null
+    },
+    {
+      "id": "UAT-03",
+      "name": "Расчёт 13 показателей",
+      "result": "Пройдено технически",
+      "evidence": "Модель HTTP 200, вероятность 20.93%, учебное предупреждение",
+      "limitation": null
+    },
+    {
+      "id": "UAT-04",
+      "name": "Пустое обязательное поле",
+      "result": "Пройдено технически",
+      "evidence": "HTML5 required; backend HTTP 400 без возраста",
+      "limitation": "Поведение встроенного сообщения браузера визуально не проверялось"
+    },
+    {
+      "id": "UAT-05",
+      "name": "Неверный возраст",
+      "result": "Пройдено технически",
+      "evidence": "HTML5 диапазон 18–120; backend HTTP 400 для -5",
+      "limitation": "Всплывающая подсказка браузера визуально не проверялась"
+    },
+    {
+      "id": "UAT-06",
+      "name": "Запрет доступа к администрированию",
+      "result": "Пройдено технически",
+      "evidence": "Обычный пользователь: /admin отвечает HTTP 403",
+      "limitation": null
+    },
+    {
+      "id": "UAT-07",
+      "name": "Создание аккаунта администратором",
+      "result": "Пройдено технически",
+      "evidence": "Администратор создал пользователя; новый логин работает",
+      "limitation": null
+    },
+    {
+      "id": "UAT-08",
+      "name": "Скачать и импортировать пример CSV",
+      "result": "Пройдено технически",
+      "evidence": "Пример CSV скачан и обработан без общей ошибки",
+      "limitation": null
+    },
+    {
+      "id": "UAT-09",
+      "name": "45 правильных и 5 ошибочных строк",
+      "result": "Пройдено технически",
+      "evidence": "50 строк: 45 приняты, 5 ошибок на строках 11/21/31/41/51",
+      "limitation": null
+    },
+    {
+      "id": "UAT-10",
+      "name": "Запрет персонального поля в CSV",
+      "result": "Пройдено технически",
+      "evidence": "Добавлен patient_name: файл целиком отвергнут (HTTP 400)",
+      "limitation": null
+    },
+    {
+      "id": "UAT-11",
+      "name": "Получение SYN-001 и 13 значений",
+      "result": "Пройдено технически",
+      "evidence": "Mock HTTP 200; показаны 13 параметров и прогноз",
+      "limitation": null
+    },
+    {
+      "id": "UAT-12",
+      "name": "Mock-сервис недоступен",
+      "result": "Пройдено технически",
+      "evidence": "Остановленный mock: HTTP 400, понятная ошибка без прогноза",
+      "limitation": null
+    },
+    {
+      "id": "UAT-13",
+      "name": "Выход завершает сеанс",
+      "result": "Пройдено технически",
+      "evidence": "После выхода /integration перенаправляет на /login",
+      "limitation": null
+    }
+  ],
+  "passed_technical": 13,
+  "failed": 0
+}
